@@ -3,7 +3,13 @@
 angular.module('starter.controllers', [])
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
-.controller('DashCtrl', function($scope) {})
+.controller('DashCtrl', function($scope, $ionicPlatform, $cordovaVibration) {
+  $scope.vibrate = function() {
+    $ionicPlatform.ready(function() {
+      $cordovaVibration.vibrate(100);
+    });
+  };
+})
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 .controller('ChatsCtrl', function($scope, Chats) {

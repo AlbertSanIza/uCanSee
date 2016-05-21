@@ -7,8 +7,8 @@
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <script src="lib/ionic/js/ionic.bundle.js"></script>
-
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB16sGmIekuGIvYOfNoW9T44377IU2d2Es&amp;sensor=true"></script>
+    <script src="lib/ngCordova/ng-cordova.min.js"></script>
     <script src="cordova.js"></script>
     <script src="js/app.js"></script>
     <script src="js/controllers.js"></script>
@@ -19,10 +19,12 @@
       <h1 class="title">Map</h1>
     </ion-header-bar>
     <ion-content scroll="false">
+
       <map on-create="mapCreated(map)"></map>
     </ion-content>
     <ion-footer-bar class="bar-stable">
       <a ng-click="centerOnMe()" class="button button-icon icon ion-navigate"></a>
+      <button class="button button-light" ng-click="vibrateNow()">Vibra :p</button>
     </ion-footer-bar>
   </body>
 </html>

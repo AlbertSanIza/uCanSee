@@ -1,6 +1,13 @@
 angular.module('starter.controllers', [])
 
-.controller('MapCtrl', function($scope, $ionicLoading) {
+.controller('MapCtrl', function($scope, $ionicPlatform, $ionicLoading, $cordovaVibration) {
+  $scope.vibrateNow = function() {
+    console.log("antes del plat");
+    $ionicPlatform.ready(function() {
+      console.log("dentro del plat");
+      $cordovaVibration.vibrate(100);
+    });
+  };
   $scope.mapCreated = function(map) {
     $scope.map = map;
   };

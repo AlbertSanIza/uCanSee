@@ -1,5 +1,8 @@
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
+var PROXIMIIO_TOKEN = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImlzcyI6ImMwYWJkNWJlMjNmODQwN2NjMGRkMjgxMzZkYzI3YWVlIiwidHlwZSI6ImFwcGxpY2F0aW9uIiwiYXBwbGljYXRpb25faWQiOiI0MmVlZDY2OC1hNGQwLTQyZDMtYjk5OS03YmFmOGZlZDZjMjQifQ.r2R3AVQHQFiVC1YaOE6QLcaY7V4FSPrZ52YgusZ2zno";
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 angular.module('starter.services', [])
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
@@ -48,6 +51,19 @@ angular.module('starter.services', [])
         }
       }
       return null;
+    }
+  };
+})
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+.factory("Proximiio", function() {
+  return {
+    init: function(outputTriggerCallback, inputTriggerCallback, positionChangeCallback) {
+      proximiio.setToken(PROXIMIIO_TOKEN);
+      proximiio.setDebugOutput(true, null, null);
+      proximiio.setOutputTriggerCallback(outputTriggerCallback);
+      proximiio.setInputTriggerCallback(inputTriggerCallback);
+      proximiio.setPositionChangeCallback(positionChangeCallback);
     }
   };
 })

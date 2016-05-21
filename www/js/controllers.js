@@ -9,6 +9,42 @@ angular.module('starter.controllers', [])
       $cordovaVibration.vibrate(100);
     });
   };
+
+
+  $scope.entered = "Discovering...";
+  $scope.output = "Waiting...";
+  $scope.inputType = "Discovering...";
+  $scope.inputObject = "Discovering...";
+  $scope.lastPositionLatitude = "Discovering...";
+  $scope.lastPositionLongitude = "Discovering...";
+
+
+  ionic.Platform.ready(function() {
+
+    var outputTriggerCallback = function(output) {
+      $scope.output = output;
+      $scope.$apply()
+    };
+
+    var inputTriggerCallback = function(entered, geofence) {
+      $scope.entered = entered;
+      $scope.inputType = geofence.name;
+      $scope.lastPositionLatitude = geofence.area.lat;
+      $scope.lastPositionLongitude = geofence.area.lon;
+      $scope.inputObject = JSON.stringify(geofence, null, 2);
+      $scope.$apply();
+    };
+
+    var positionChangeCallback = function(coords) {
+      $scope.lastPositionLatitude = coords.coordinates.lat;
+      $scope.lastPositionLongitude = coords.coordinates.lon;
+      $scope.$apply();
+    };
+
+    Proximiio.init(outputTriggerCallback, inputTriggerCallback, positionChangeCallback);
+  });
+
+
 })
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------

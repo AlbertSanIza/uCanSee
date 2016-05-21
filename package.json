@@ -21,7 +21,11 @@
     "cordova-plugin-splashscreen",
     "cordova-plugin-statusbar",
     "ionic-plugin-keyboard",
-    "cordova-plugin-vibration"
+    "cordova-plugin-vibration",
+    {
+      "locator": "https://github.com/proximiio/proximiio-cordova.git",
+      "id": "navtureapps-proximiio"
+    }
   ],
   "cordovaPlatforms": [
     "ios",

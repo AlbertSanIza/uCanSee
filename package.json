@@ -22,10 +22,7 @@
     "cordova-plugin-statusbar",
     "ionic-plugin-keyboard",
     "cordova-plugin-vibration",
-    {
-      "locator": "https://github.com/proximiio/proximiio-cordova.git",
-      "id": "navtureapps-proximiio"
-    }
+    "cordova-plugin-geolocation"
   ],
   "cordovaPlatforms": [
     "ios",
@@ -33,6 +30,7 @@
       "platform": "ios",
       "version": "",
       "locator": "ios"
-    }
+    },
+    "android"
   ]
 }

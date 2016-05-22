@@ -3,12 +3,25 @@
 angular.module('starter.controllers', [])
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
-.controller('DashCtrl', function($scope, $ionicPlatform, $cordovaVibration) {
+.controller('DashCtrl', function($scope, $ionicPlatform, $cordovaVibration, $cordovaGeolocation) {
   $scope.vibrate = function() {
     $ionicPlatform.ready(function() {
       $cordovaVibration.vibrate(100);
+
+      var posOptions = {timeout: 10000, enableHighAccuracy: false};
+
+      $cordovaGeolocation.getCurrentPosition(posOptions).then(function (position) {
+        var lat  = position.coords.latitude
+        var long = position.coords.longitude
+        console.log("lat: " + lat + " lon: " + long);
+      }, function(err) {
+        // error
+      });
+      
     });
   };
+
+/*
 
 
   $scope.entered = "Discovering...";
@@ -43,7 +56,7 @@ angular.module('starter.controllers', [])
 
     Proximiio.init(outputTriggerCallback, inputTriggerCallback, positionChangeCallback);
   });
-
+*/
 
 })
 //------------------------------------------------------------------------------

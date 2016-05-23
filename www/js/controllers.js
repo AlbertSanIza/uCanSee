@@ -81,36 +81,52 @@ angular.module('starter.controllers', [])
 })
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
-.controller('ProximiioCtrl', function($scope, $http) {
 
-  $scope.textoo = "nada aun!";
+.controller('ProximiioCtrl', function($scope, $http, Proximiio, myProximiio) {
+
+  $scope.textoo = "Este texto es de prueba";
 
   $scope.test = function() {
-
-    $http.post('https://api.proximi.fi/core_auth/login', {email: "albert.san.iza@gmail.com", password: "rsy52m7a"}).success(function(data) {
-      console.log(data.token);
-      $http.get('https://api.proximi.fi/core/geofences?limit=10&skip=0', {
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': 'Bearer ' + data.token
-        }
-      }).success(function(data) {
-        $scope.textoo = data;
-        console.log(data);
-      }).error(function(e) {
-        console.log("Error: " + e);
-        $scope.textoo = e;
-        console.log(e);
-      });
-
-
+    $http.get('https://api.proximi.fi/core/geofences?limit=10&skip=0', {
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + myProximiio.token
+      }
+    }).success(function(data) {
+      console.log(data[0]);
     }).error(function(e) {
       console.log("Error: " + e);
     });
-
-
-
   };
+
+  $scope.entered = "Discovering...";
+  $scope.output = "Waiting...";
+  $scope.inputType = "Discovering...";
+  $scope.inputObject = "Discovering...";
+  $scope.lastPositionLatitude = "Discovering...";
+  $scope.lastPositionLongitude = "Discovering...";
+
+  ionic.Platform.ready(function() {
+    var outputTriggerCallback = function(output) {
+      $scope.output = output;
+      $scope.$apply()
+    };
+    var inputTriggerCallback = function(entered, geofence) {
+      $scope.entered = entered;
+      $scope.inputType = geofence.name;
+      $scope.lastPositionLatitude = geofence.area.lat;
+      $scope.lastPositionLongitude = geofence.area.lon;
+      $scope.inputObject = JSON.stringify(geofence, null, 2);
+      $scope.$apply();
+    };
+    var positionChangeCallback = function(coords) {
+      $scope.lastPositionLatitude = coords.coordinates.lat;
+      $scope.lastPositionLongitude = coords.coordinates.lon;
+      $scope.$apply();
+    };
+    Proximiio.init(outputTriggerCallback, inputTriggerCallback, positionChangeCallback);
+  });
+
 })
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------

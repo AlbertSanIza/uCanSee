@@ -17,7 +17,7 @@ angular.module('starter.controllers', [])
       }, function(err) {
         // error
       });
-      
+
     });
   };
 
@@ -77,6 +77,39 @@ angular.module('starter.controllers', [])
 .controller('AccountCtrl', function($scope) {
   $scope.settings = {
     enableFriends: true
+  };
+})
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+.controller('ProximiioCtrl', function($scope, $http) {
+
+  $scope.textoo = "nada aun!";
+
+  $scope.test = function() {
+
+    $http.post('https://api.proximi.fi/core_auth/login', {email: "albert.san.iza@gmail.com", password: "rsy52m7a"}).success(function(data) {
+      console.log(data.token);
+      $http.get('https://api.proximi.fi/core/geofences?limit=10&skip=0', {
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer ' + data.token
+        }
+      }).success(function(data) {
+        $scope.textoo = data;
+        console.log(data);
+      }).error(function(e) {
+        console.log("Error: " + e);
+        $scope.textoo = e;
+        console.log(e);
+      });
+
+
+    }).error(function(e) {
+      console.log("Error: " + e);
+    });
+
+
+
   };
 })
 //------------------------------------------------------------------------------

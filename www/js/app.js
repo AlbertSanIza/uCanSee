@@ -59,6 +59,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       }
     }
   });
+  $stateProvider.state('tab.proximiio', {
+    url: '/proximiio',
+    views: {
+      'tab-proximiio': {
+        templateUrl: 'templates/tab-proximiio.html',
+        controller: 'ProximiioCtrl'
+      }
+    }
+  });
   $urlRouterProvider.otherwise('/tab/dash');
 })
 //------------------------------------------------------------------------------

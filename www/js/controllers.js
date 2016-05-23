@@ -4,6 +4,7 @@ angular.module('starter.controllers', [])
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 .controller('DashCtrl', function($scope, $ionicPlatform, $cordovaVibration, $cordovaGeolocation) {
+  $scope.algo = [40.74, -74.18];
   $scope.vibrate = function() {
     $ionicPlatform.ready(function() {
       $cordovaVibration.vibrate(100);
@@ -12,6 +13,7 @@ angular.module('starter.controllers', [])
         var lat  = position.coords.latitude
         var long = position.coords.longitude
         console.log("lat: " + lat + " lon: " + long);
+        $scope.algo = [lat, long];
       }, function(err) {
       });
     });

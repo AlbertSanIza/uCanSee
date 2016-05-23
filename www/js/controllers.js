@@ -29,8 +29,10 @@ angular.module('starter.controllers', [])
       }
     }).success(function(data) {
       console.log(data[0]);
+      $scope.textoo = data;
     }).error(function(e) {
       console.log("Error: " + e);
+      $scope.textoo = e;
     });
   };
 })

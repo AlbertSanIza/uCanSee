@@ -7,17 +7,13 @@ angular.module('starter.controllers', [])
   $scope.vibrate = function() {
     $ionicPlatform.ready(function() {
       $cordovaVibration.vibrate(100);
-
       var posOptions = {timeout: 10000, enableHighAccuracy: false};
-
       $cordovaGeolocation.getCurrentPosition(posOptions).then(function (position) {
         var lat  = position.coords.latitude
         var long = position.coords.longitude
         console.log("lat: " + lat + " lon: " + long);
       }, function(err) {
-        // error
       });
-
     });
   };
 })
@@ -45,9 +41,7 @@ angular.module('starter.controllers', [])
 //------------------------------------------------------------------------------
 
 .controller('ProximiioCtrl', function($scope, $http, Proximiio, myProximiio) {
-
   $scope.textoo = "Este texto es de prueba";
-
   $scope.test = function() {
     $http.get('https://api.proximi.fi/core/geofences?limit=10&skip=0', {
       headers: {
@@ -60,14 +54,12 @@ angular.module('starter.controllers', [])
       console.log("Error: " + e);
     });
   };
-
   $scope.entered = "Discovering...";
   $scope.output = "Waiting...";
   $scope.inputType = "Discovering...";
   $scope.inputObject = "Discovering...";
   $scope.lastPositionLatitude = "Discovering...";
   $scope.lastPositionLongitude = "Discovering...";
-
   ionic.Platform.ready(function() {
     var outputTriggerCallback = function(output) {
       $scope.output = output;
@@ -88,7 +80,6 @@ angular.module('starter.controllers', [])
     };
     Proximiio.init(outputTriggerCallback, inputTriggerCallback, positionChangeCallback);
   });
-
 })
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------

@@ -4,7 +4,6 @@ angular.module('starter.controllers', [])
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 .controller('DashCtrl', function($scope, $ionicPlatform, $cordovaVibration) {
-  $scope.algo = [40.74, -74.18];
   $scope.vibrate = function() {
     $ionicPlatform.ready(function() {
       $cordovaVibration.vibrate(100);
@@ -32,7 +31,9 @@ angular.module('starter.controllers', [])
 })
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
-.controller('LocationCtrl', function($scope, $ionicPlatform, $cordovaGeolocation) {
+.controller('LocationCtrl', function($scope, $ionicLoading, $ionicPlatform, $cordovaGeolocation) {
+
+  $scope.text = "Loading..."
 
   $scope.myPosition = [40.689211, -74.044575];
 
@@ -42,10 +43,16 @@ angular.module('starter.controllers', [])
   };
 
   $scope.findMe = function() {
+    $ionicLoading.show({
+      template: '<ion-spinner icon="spiral" class="spinner-energized"></ion-spinner><br>{{text}}...',
+      scope: $scope
+    });
     $ionicPlatform.ready(function() {
       $cordovaGeolocation.getCurrentPosition(posOptions).then(function (position) {
         $scope.myPosition = [position.coords.latitude, position.coords.longitude];
+        $ionicLoading.hide();
       }, function(err) {
+        $scope.text = err.message;
       });
     });
   };

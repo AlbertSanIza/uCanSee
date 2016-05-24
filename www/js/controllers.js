@@ -3,19 +3,11 @@
 angular.module('starter.controllers', [])
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
-.controller('DashCtrl', function($scope, $ionicPlatform, $cordovaVibration, $cordovaGeolocation) {
+.controller('DashCtrl', function($scope, $ionicPlatform, $cordovaVibration) {
   $scope.algo = [40.74, -74.18];
   $scope.vibrate = function() {
     $ionicPlatform.ready(function() {
       $cordovaVibration.vibrate(100);
-      var posOptions = {timeout: 10000, enableHighAccuracy: false};
-      $cordovaGeolocation.getCurrentPosition(posOptions).then(function (position) {
-        var lat  = position.coords.latitude
-        var long = position.coords.longitude
-        console.log("lat: " + lat + " lon: " + long);
-        $scope.algo = [lat, long];
-      }, function(err) {
-      });
     });
   };
 })

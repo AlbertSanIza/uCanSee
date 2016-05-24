@@ -12,8 +12,22 @@ angular.module('starter.controllers', [])
 })
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
-.controller('ProximiioCtrl', function($scope, $http, myProximiio) {
+.controller('ProximiioCtrl', function($scope, myProximiio) {
+
   $scope.text_test = "Este texto es de prueba";
+
+  $scope.Login = function() {
+    myProximiio.Login({email: 'albert.san.iza@gmail.com', password: 'rsy52m7a'}).success(function(data) {
+      console.log(data);
+      $scope.text_test = data;
+    }).error(function(e) {
+      console.log(e);
+      $scope.text_test = e;
+    });
+  };
+
+
+
   $scope.test = function() {
     $http.get('https://api.proximi.fi/core/geofences?limit=10&skip=0', {
       headers: {

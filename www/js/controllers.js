@@ -42,6 +42,21 @@ angular.module('starter.controllers', [])
     enableHighAccuracy: false
   };
 
+  /*
+  var watchOptions = {
+    timeout : 3000,
+    enableHighAccuracy: false
+  };
+  var watch = $cordovaGeolocation.watchPosition(watchOptions);
+  watch.then(null, function(err) {
+    // error
+  }, function(position) {
+    var lat  = position.coords.latitude
+    var long = position.coords.longitude
+    $scope.myPosition = [position.coords.latitude, position.coords.longitude];
+  });
+  */
+
   $scope.findMe = function() {
     $ionicLoading.show({
       template: '<ion-spinner icon="spiral" class="spinner-energized"></ion-spinner><br>{{text}}...',

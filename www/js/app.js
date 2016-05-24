@@ -40,6 +40,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       }
     }
   });
+  $stateProvider.state('tab.location', {
+    url: '/location',
+    views: {
+      'tab-location': {
+        templateUrl: 'templates/tab-location.html',
+        controller: 'LocationCtrl'
+      }
+    }
+  });
   $urlRouterProvider.otherwise('/tab/dash');
 })
 //------------------------------------------------------------------------------

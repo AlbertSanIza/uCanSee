@@ -40,6 +40,22 @@ angular.module('starter.controllers', [])
 })
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
-.controller('LocationCtrl', function($scope) {
+.controller('LocationCtrl', function($scope, $ionicPlatform, $cordovaGeolocation) {
+
+  $scope.myPosition = [40.689211, -74.044575];
+
+  var posOptions = {
+    timeout: 10000,
+    enableHighAccuracy: false
+  };
+
+  $scope.findMe = function() {
+    $ionicPlatform.ready(function() {
+      $cordovaGeolocation.getCurrentPosition(posOptions).then(function (position) {
+        $scope.myPosition = [position.coords.latitude, position.coords.longitude];
+      }, function(err) {
+      });
+    });
+  };
 
 })

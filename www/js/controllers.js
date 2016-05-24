@@ -13,7 +13,7 @@ angular.module('starter.controllers', [])
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 .controller('ProximiioCtrl', function($scope, $http, myProximiio) {
-  $scope.textoo = "Este texto es de prueba";
+  $scope.text_test = "Este texto es de prueba";
   $scope.test = function() {
     $http.get('https://api.proximi.fi/core/geofences?limit=10&skip=0', {
       headers: {
@@ -22,16 +22,16 @@ angular.module('starter.controllers', [])
       }
     }).success(function(data) {
       console.log(data[0]);
-      $scope.textoo = data;
+      $scope.text_test = data;
     }).error(function(e) {
       console.log("Error: " + e);
-      $scope.textoo = e;
+      $scope.text_test = e;
     });
   };
 })
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
-.controller('LocationCtrl', function($scope, $ionicLoading, $ionicPlatform, $cordovaGeolocation) {
+.controller('LocationCtrl', function($scope, $ionicLoading, $ionicPlatform, $cordovaGeolocation, myProximiio) {
 
   $scope.text = "Loading..."
 
@@ -58,6 +58,7 @@ angular.module('starter.controllers', [])
   */
 
   $scope.findMe = function() {
+    myProximiio.testVariable = "aca no tanto";
     $ionicLoading.show({
       template: '<ion-spinner icon="spiral" class="spinner-energized"></ion-spinner><br>{{text}}...',
       scope: $scope

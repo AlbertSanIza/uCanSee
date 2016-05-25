@@ -14,6 +14,15 @@ angular.module('starter.controllers', [])
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 .controller('LoginCtrl', function($scope, $state, $ionicPlatform) {
+
+  $scope.clientSideList = [
+    { text: "Backbone", value: "bb" },
+    { text: "Angular", value: "ng" },
+    { text: "Ember", value: "em" },
+    { text: "Knockout", value: "ko" }
+  ];
+
+
   $scope.signIn = function() {
     $state.go('tab.dashboard');
   };

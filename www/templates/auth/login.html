@@ -1,20 +1,19 @@
-<ion-view view-title="U CAN SEE Rally!">
+<ion-view view-title="SIGN IN">
   <ion-content>
     <div class="list card">
-      <label class="item item-input item-stacked-label">
-        <span class="input-label">Team Name</span>
-        <input type="text" ng-model="user.username">
-      </label>
-      <label class="item item-input item-stacked-label">
-        <span class="input-label">Password</span>
-        <input type="password" ng-model="user.password">
-      </label>
+      <div class="item item-divider">
+        Select yout Team
+      </div>
+      <ion-radio ng-repeat="item in clientSideList" ng-value="item.value" ng-model="data.clientSide">{{item.text}}</ion-radio>
+      <div class="item item-divider">
+        Enter your Team Password
+      </div>
+      <label class="item item-input">
+         <input type="password" placeholder="Provided by uCanSee Staff">
+       </label>
     </div>
     <div class="padding">
-      <button class="button button-block button-positive" ng-click="signIn(user)">Sign In</button>
-      <p class="text-center">
-        <a href="#/register">Register</a>
-      </p>
+      <button class="button button-block button-positive" ng-click="signIn(user)">SIGN IN NOW!</button>
     </div>
   </ion-content>
 </ion-view>

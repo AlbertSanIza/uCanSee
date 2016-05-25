@@ -3,6 +3,16 @@
 angular.module('starter.controllers', [])
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
+.controller('IntroCtrl', function($scope, $state) {
+  $scope.login = function() {
+    $state.go('login');
+  };
+  $scope.register = function() {
+    $state.go('register');
+  };
+})
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 .controller('LoginCtrl', function($scope, $state, $ionicPlatform) {
   $scope.signIn = function() {
     $state.go('tab.dashboard');

@@ -15,9 +15,14 @@ angular.module('starter.controllers', [])
 //------------------------------------------------------------------------------
 .controller('LoginCtrl', function($scope, $state, $ionicPlatform, uCanSee) {
   $scope.uCanSee = uCanSee.Fire;
+  $scope.userData = new Object();
   $scope.signIn = function(param) {
-    uCanSee.id = param.id
-    $state.go('tab.dashboard');
+    if(param.password == $scope.uCanSee.teams[param.index].password) {
+      uCanSee.Team = $scope.uCanSee.teams[param.index];
+      $state.go('tab.dashboard');
+    } else {
+      $scope.userData.password = "";
+    }
   };
 })
 //------------------------------------------------------------------------------
@@ -28,6 +33,8 @@ angular.module('starter.controllers', [])
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 .controller('DashboardCtrl', function($scope, $ionicPlatform, uCanSee) {
+  $scope.uCanSeeTeam = uCanSee.Fire;
+  console.log($scope.uCanSeeTeam);
 })
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------

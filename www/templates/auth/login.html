@@ -4,16 +4,16 @@
       <div class="item item-divider">
         Select your Team
       </div>
-      <ion-radio ng-repeat="Team in fireTeam.teams">{{Team.name}}</ion-radio>
+      <ion-radio ng-repeat="Team in uCanSee.teams" ng-value="$index" ng-model="userData.index">{{Team.name}}</ion-radio>
       <div class="item item-divider">
         Enter your Team Password
       </div>
       <label class="item item-input">
-         <input type="password" placeholder="Provided by uCanSee Staff">
-       </label>
+        <input type="password" placeholder="Provided by uCanSee Staff" ng-model="userData.password">
+      </label>
     </div>
     <div class="padding">
-      <button class="button button-block button-positive" ng-click="signIn(user)">SIGN IN NOW!</button>
+      <button class="button button-block button-balanced" ng-disabled="userData.index == null || !userData.password"ng-click="signIn(userData)">SIGN IN NOW!</button>
     </div>
   </ion-content>
 </ion-view>

@@ -29,13 +29,13 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
   $stateProvider.state('tab', {
     url: '/tab',
     abstract: true,
-    templateUrl: 'templates/tabs.html'
+    templateUrl: 'templates/tab/tabs.html'
   });
   $stateProvider.state('tab.dashboard', {
     url: '/dashboard',
     views: {
       'tab-dashboard': {
-        templateUrl: 'templates/tab-dashboard.html',
+        templateUrl: 'templates/tab/tab-dashboard.html',
         controller: 'DashboardCtrl'
       }
     }
@@ -44,7 +44,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     url: '/proximiio',
     views: {
       'tab-proximiio': {
-        templateUrl: 'templates/tab-proximiio.html',
+        templateUrl: 'templates/tab/tab-proximiio.html',
         controller: 'ProximiioCtrl'
       }
     }
@@ -53,7 +53,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     url: '/location',
     views: {
       'tab-location': {
-        templateUrl: 'templates/tab-location.html',
+        templateUrl: 'templates/tab/tab-location.html',
         controller: 'LocationCtrl'
       }
     }

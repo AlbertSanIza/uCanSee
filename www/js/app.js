@@ -29,7 +29,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
   });
   $stateProvider.state('register', {
     url: '/register',
-    templateUrl: 'templates/auth/register.html'
+    templateUrl: 'templates/auth/register.html',
+    controller: 'RegisterCtrl'
   });
   $stateProvider.state('tab', {
     url: '/tab',

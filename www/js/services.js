@@ -5,7 +5,7 @@ angular.module('starter.services', [])
 //------------------------------------------------------------------------------
 .service("uCanSeeFire", function($firebaseObject) {
   var ref = new Firebase("https://ucansee.firebaseio.com");
-  this.fire = $firebaseObject(ref);
+  this.Fire = $firebaseObject(ref);
   this.id = "";
 })
 //------------------------------------------------------------------------------

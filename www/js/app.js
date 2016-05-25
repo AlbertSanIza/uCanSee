@@ -17,6 +17,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 .config(function($stateProvider, $urlRouterProvider) {
+  $stateProvider.state('login', {
+    url: '/login',
+    templateUrl: 'templates/auth/login.html',
+    controller: 'LoginCtrl'
+  });
+  $stateProvider.state('register', {
+    url: '/register',
+    templateUrl: 'templates/auth/register.html'
+  });
   $stateProvider.state('tab', {
     url: '/tab',
     abstract: true,
@@ -49,7 +58,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       }
     }
   });
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/login');
 })
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------

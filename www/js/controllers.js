@@ -13,13 +13,16 @@ angular.module('starter.controllers', [])
 })
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
-.controller('LoginCtrl', function($scope, $state, $ionicPlatform, uCanSee) {
+.controller('LoginCtrl', function($scope, $state, $ionicPlatform, $cordovaVibration, uCanSee) {
   $scope.uCanSee = uCanSee.Fire;
   $scope.userData = new Object();
   $scope.signIn = function(param) {
     if(param.password == $scope.uCanSee.teams[param.index].password) {
-      uCanSee.Team = $scope.uCanSee.teams[param.index];
-      $state.go('tab.dashboard');
+      uCanSee.Index = param.index;
+      $ionicPlatform.ready(function() {
+        //$cordovaVibration.vibrate(100);
+        $state.go('tab.dashboard');
+      });
     } else {
       $scope.userData.password = "";
     }
@@ -33,8 +36,7 @@ angular.module('starter.controllers', [])
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 .controller('DashboardCtrl', function($scope, $ionicPlatform, uCanSee) {
-  $scope.uCanSeeTeam = uCanSee.Fire;
-  console.log($scope.uCanSeeTeam);
+  $scope.uCanSee = uCanSee;
 })
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------

@@ -1,14 +1,46 @@
 {
   "teams": [
-    {"name": "Angular", "short_name": "NG", "description": "Best Ever!", "password": "123"},
-    {"name": "Backbone", "short_name": "BB", "description": "Never understood", "password": "qwe"},
-    {"name": "Ember", "short_name": "EM", "description": "wtf?", "password": "asd"},
-    {"name": "Knockout", "short_name": "KO", "description": "meeh", "password": "zxc"}
+    {
+      "name": "Angular",
+      "short_name": "NG",
+      "description": "Best Ever!",
+      "password": "123"
+    },
+    {
+      "name": "Backbone",
+      "short_name": "BB",
+      "description": "Never understood",
+      "password": "qwe"
+    },
+    {
+      "name": "Ember",
+      "short_name": "EM",
+      "description": "wtf?",
+      "password": "asd"
+    },
+    {
+      "name": "Knockout",
+      "short_name": "KO",
+      "description": "meeh",
+      "password": "zxc"
+    }
   ],
   "register": [
-    {"title": "Register", "description": "In order to register to this event, please send an email to me@cetys.mx by sendind the name and matricula of every student"},
-    {"title": "Rules", "description": "No mas de 5 miembros blablabal"},
-    {"title": "Sponsors", "description": "Coca-Cola, Fimbres Logos, Ingenium, Tooginos, etc."},
-    {"title": "Help", "description": "Para cualquier duda o aclaracion favor de comunicarse aqui:"}
+    {
+      "title": "Register",
+      "description": "In order to register to this event, please send an email to me@cetys.mx by sendind the name and matricula of every student"
+    },
+    {
+      "title": "Rules",
+      "description": "No mas de 5 miembros blablabal"
+    },
+    {
+      "title": "Sponsors",
+      "description": "Coca-Cola, Fimbres Logos, Ingenium, Tooginos, etc."
+    },
+    {
+      "title": "Help",
+      "description": "Para cualquier duda o aclaracion favor de comunicarse aqui:"
+    }
   ]
 }

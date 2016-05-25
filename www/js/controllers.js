@@ -94,7 +94,7 @@ angular.module('starter.controllers', [])
     enableHighAccuracy: false
   };
 
-
+  /*
   var watchOptions = {
     timeout : 3000,
     enableHighAccuracy: false
@@ -107,6 +107,7 @@ angular.module('starter.controllers', [])
     var long = position.coords.longitude
     $scope.myPosition = [position.coords.latitude, position.coords.longitude];
   });
+  */
 
 
   $scope.findMe = function() {

@@ -3,7 +3,7 @@
 angular.module('starter.controllers', [])
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
-.controller('IntroCtrl', function($scope, $state) {
+.controller('IntroCtrl', function($scope, $state, uCanSee) {
   $scope.login = function() {
     $state.go('login');
   };
@@ -13,29 +13,21 @@ angular.module('starter.controllers', [])
 })
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
-.controller('LoginCtrl', function($scope, $state, $ionicPlatform, myTeam) {
-  $scope.fireTeam = myTeam.fire;
-  $scope.clientSideList = [
-    { name: "Backbone", value: "bb" },
-    { name: "Angular", value: "ng" },
-    { name: "Ember", value: "em" },
-    { name: "Knockout", value: "ko" }
-  ];
-  $scope.team = {
-    id: "",
-    password: ""
-  };
-
+.controller('LoginCtrl', function($scope, $state, $ionicPlatform, uCanSee) {
+  $scope.uCanSee = uCanSee.Fire;
   $scope.signIn = function(param) {
-    myTeam.id = param.id
+    uCanSee.id = param.id
     $state.go('tab.dashboard');
   };
-
 })
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
-.controller('DashboardCtrl', function($scope, $ionicPlatform, myTeam) {
-  console.log(myTeam);
+.controller('RegisterCtrl', function($scope, uCanSee) {
+  $scope.uCanSee = uCanSee.Fire;
+})
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+.controller('DashboardCtrl', function($scope, $ionicPlatform, uCanSee) {
 })
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
@@ -98,16 +90,12 @@ angular.module('starter.controllers', [])
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 .controller('LocationCtrl', function($scope, $ionicLoading, $ionicPlatform, $cordovaGeolocation, myProximiio) {
-
   $scope.text = "Loading..."
-
   $scope.myPosition = [40.689211, -74.044575];
-
   var posOptions = {
     timeout: 10000,
     enableHighAccuracy: false
   };
-
   /*
   var watchOptions = {
     timeout : 3000,
@@ -122,8 +110,6 @@ angular.module('starter.controllers', [])
     $scope.myPosition = [position.coords.latitude, position.coords.longitude];
   });
   */
-
-
   $scope.findMe = function() {
     myProximiio.testVariable = "aca no tanto";
     $ionicLoading.show({
@@ -139,5 +125,6 @@ angular.module('starter.controllers', [])
       });
     });
   };
-
 })
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------

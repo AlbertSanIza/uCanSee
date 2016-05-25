@@ -17,6 +17,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 .config(function($stateProvider, $urlRouterProvider) {
+  $stateProvider.state('intro', {
+    url: '/intro',
+    templateUrl: 'templates/auth/intro.html',
+    controller: 'IntroCtrl'
+  });
   $stateProvider.state('login', {
     url: '/login',
     templateUrl: 'templates/auth/login.html',
@@ -58,7 +63,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       }
     }
   });
-  $urlRouterProvider.otherwise('/login');
+  $urlRouterProvider.otherwise('/intro');
 })
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------

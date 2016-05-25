@@ -4,25 +4,49 @@
       "name": "Angular",
       "short_name": "NG",
       "description": "Best Ever!",
-      "password": "123"
+      "password": "123",
+      "members": [
+        {
+          "id": "19824",
+          "name": "Albert Sanchez"
+        }
+      ]
     },
     {
       "name": "Backbone",
       "short_name": "BB",
       "description": "Never understood",
-      "password": "qwe"
+      "password": "qwe",
+      "members": [
+        {
+          "id": "",
+          "name": ""
+        }
+      ]
     },
     {
       "name": "Ember",
       "short_name": "EM",
       "description": "wtf?",
-      "password": "asd"
+      "password": "asd",
+      "members": [
+        {
+          "id": "",
+          "name": ""
+        }
+      ]
     },
     {
       "name": "Knockout",
       "short_name": "KO",
       "description": "meeh",
-      "password": "zxc"
+      "password": "zxc",
+      "members": [
+        {
+          "id": "",
+          "name": ""
+        }
+      ]
     }
   ],
   "register": [

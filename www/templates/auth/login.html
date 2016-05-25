@@ -2,9 +2,9 @@
   <ion-content>
     <div class="list card">
       <div class="item item-divider">
-        Select yout Team
+        Select your Team
       </div>
-      <ion-radio ng-repeat="item in clientSideList" ng-value="item.value" ng-model="data.clientSide">{{item.text}}</ion-radio>
+      <ion-radio ng-repeat="Team in fireTeam.teams">{{Team.name}}</ion-radio>
       <div class="item item-divider">
         Enter your Team Password
       </div>

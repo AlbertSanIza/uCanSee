@@ -13,24 +13,29 @@ angular.module('starter.controllers', [])
 })
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
-.controller('LoginCtrl', function($scope, $state, $ionicPlatform) {
-
+.controller('LoginCtrl', function($scope, $state, $ionicPlatform, myTeam) {
+  $scope.fireTeam = myTeam.fire;
   $scope.clientSideList = [
-    { text: "Backbone", value: "bb" },
-    { text: "Angular", value: "ng" },
-    { text: "Ember", value: "em" },
-    { text: "Knockout", value: "ko" }
+    { name: "Backbone", value: "bb" },
+    { name: "Angular", value: "ng" },
+    { name: "Ember", value: "em" },
+    { name: "Knockout", value: "ko" }
   ];
+  $scope.team = {
+    id: "",
+    password: ""
+  };
 
-
-  $scope.signIn = function() {
+  $scope.signIn = function(param) {
+    myTeam.id = param.id
     $state.go('tab.dashboard');
   };
+
 })
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
-.controller('DashboardCtrl', function($scope, $ionicPlatform) {
-
+.controller('DashboardCtrl', function($scope, $ionicPlatform, myTeam) {
+  console.log(myTeam);
 })
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------

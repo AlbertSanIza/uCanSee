@@ -1,0 +1,8 @@
+{
+  "teams": [
+    {"name": "Angular", "short_name": "NG", "description": "Best Ever!"},
+    {"name": "Backbone", "short_name": "BB", "description": "Never understood"},
+    {"name": "Ember", "short_name": "EM", "description": "wtf?"},
+    {"name": "Knockout", "short_name": "KO", "description": "meeh"}
+  ]
+}

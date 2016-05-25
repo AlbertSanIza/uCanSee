@@ -4,5 +4,11 @@
     {"name": "Backbone", "short_name": "BB", "description": "Never understood", "password": "qwe"},
     {"name": "Ember", "short_name": "EM", "description": "wtf?", "password": "asd"},
     {"name": "Knockout", "short_name": "KO", "description": "meeh", "password": "zxc"}
+  ],
+  "register": [
+    {"title": "Register", "description": ""},
+    {"title": "Rules", "description": ""},
+    {"title": "Sponsors", "description": ""},
+    {"title": "Help", "description": ""}
   ]
 }

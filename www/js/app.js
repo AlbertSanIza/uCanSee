@@ -22,12 +22,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     abstract: true,
     templateUrl: 'templates/tabs.html'
   });
-  $stateProvider.state('tab.dash', {
-    url: '/dash',
+  $stateProvider.state('tab.dashboard', {
+    url: '/dashboard',
     views: {
-      'tab-dash': {
-        templateUrl: 'templates/tab-dash.html',
-        controller: 'DashCtrl'
+      'tab-dashboard': {
+        templateUrl: 'templates/tab-dashboard.html',
+        controller: 'DashboardCtrl'
       }
     }
   });

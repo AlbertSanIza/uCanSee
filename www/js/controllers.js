@@ -3,12 +3,8 @@
 angular.module('starter.controllers', [])
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
-.controller('DashCtrl', function($scope, $ionicPlatform, $cordovaVibration) {
-  $scope.vibrate = function() {
-    $ionicPlatform.ready(function() {
-      $cordovaVibration.vibrate(100);
-    });
-  };
+.controller('DashboardCtrl', function($scope, $ionicPlatform) {
+
 })
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
@@ -81,7 +77,7 @@ angular.module('starter.controllers', [])
     enableHighAccuracy: false
   };
 
-  
+
   var watchOptions = {
     timeout : 3000,
     enableHighAccuracy: false
@@ -94,7 +90,7 @@ angular.module('starter.controllers', [])
     var long = position.coords.longitude
     $scope.myPosition = [position.coords.latitude, position.coords.longitude];
   });
-  
+
 
   $scope.findMe = function() {
     myProximiio.testVariable = "aca no tanto";

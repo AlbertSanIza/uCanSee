@@ -65,6 +65,10 @@
     {
       "title": "Help",
       "description": "Para cualquier duda o aclaracion favor de comunicarse aqui:"
+    },
+    {
+      "title": "Credits",
+      "description": "This app was made by students of CETYS University, and using some amazing technologies such as Proximi.io, Ionic Framework and Firebase"
     }
   ]
 }

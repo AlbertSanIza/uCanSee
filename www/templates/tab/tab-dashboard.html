@@ -2,7 +2,14 @@
   <ion-content padding="true">
     <h2>{{uCanSee.Fire.teams[uCanSee.Index].name}}</h2>
     <h4>"{{uCanSee.Fire.teams[uCanSee.Index].description}}"</h4>
-    Team Members:
+    <div class="list">
+      <div class="item item-divider">
+        Team Members:
+      </div>
+      <div class="item" ng-repeat="member in uCanSee.Fire.teams[uCanSee.Index].members">
+        {{member.name}}
+      </div>
+    </div>
     {{uCanSee.Fire.teams[uCanSee.Index]}}
   </ion-content>
 </ion-view>

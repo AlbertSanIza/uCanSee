@@ -100,7 +100,7 @@ angular.module('starter.controllers', [])
 //------------------------------------------------------------------------------
 .controller('LocationCtrl', function($scope, $ionicLoading, $ionicPlatform, $cordovaGeolocation, myProximiio) {
   $scope.text = "Loading..."
-  $scope.myPosition = [40.689211, -74.044575];
+  $scope.myPosition = [32.506511, -116.923950];
   var posOptions = {
     timeout: 10000,
     enableHighAccuracy: false

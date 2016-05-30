@@ -126,7 +126,11 @@ angular.module('starter.controllers', [])
     });
     $ionicPlatform.ready(function() {
       $cordovaGeolocation.getCurrentPosition(posOptions).then(function (position) {
-        $scope.myPosition = [position.coords.latitude, position.coords.longitude];
+        var lat = parseFloat(position.coords.latitude);
+        var lon = parseFloat(position.coords.longitude);
+        lat = lat.toFixed(6);
+        lon = lon.toFixed(6);
+        $scope.myPosition = [lat, lon];
         $ionicLoading.hide();
       }, function(err) {
         $scope.text = err.message;

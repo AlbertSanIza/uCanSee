@@ -120,7 +120,6 @@ angular.module('starter.controllers', [])
   });
   */
   $scope.findMe = function() {
-    myProximiio.testVariable = "aca no tanto";
     $ionicLoading.show({
       template: '<ion-spinner icon="spiral" class="spinner-energized"></ion-spinner><br>{{text}}...',
       scope: $scope

@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'ngCordova', 'ngMap', 'firebase'])
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.directives', 'starter.services', 'ngCordova', 'ngMap', 'firebase'])
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 .run(function($ionicPlatform) {

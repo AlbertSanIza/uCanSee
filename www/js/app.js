@@ -46,6 +46,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       }
     }
   });
+  $stateProvider.state('tab.location', {
+    url: '/location',
+    views: {
+      'tab-location': {
+        templateUrl: 'templates/tab/tab-location.html',
+        controller: 'LocationCtrl'
+      }
+    }
+  });
   $stateProvider.state('tab.proximiio', {
     url: '/proximiio',
     views: {
@@ -61,15 +70,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       'tab-cordova': {
         templateUrl: 'templates/tab/tab-cordova.html',
         controller: 'CordovaCtrl'
-      }
-    }
-  });
-  $stateProvider.state('tab.location', {
-    url: '/location',
-    views: {
-      'tab-location': {
-        templateUrl: 'templates/tab/tab-location.html',
-        controller: 'LocationCtrl'
       }
     }
   });

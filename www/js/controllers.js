@@ -40,6 +40,48 @@ angular.module('starter.controllers', [])
 })
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
+.controller('LocationCtrl', function($scope, $ionicLoading, $ionicPlatform, $cordovaGeolocation, myProximiio) {
+  $scope.text = "Loading..."
+  $scope.myPosition = [32.506511, -116.923950];
+  var posOptions = {
+    timeout: 10000,
+    enableHighAccuracy: false
+  };
+  /*
+  var watchOptions = {
+    timeout : 3000,
+    enableHighAccuracy: false
+  };
+  var watch = $cordovaGeolocation.watchPosition(watchOptions);
+  watch.then(null, function(err) {
+    // error
+  }, function(position) {
+    var lat  = position.coords.latitude
+    var long = position.coords.longitude
+    $scope.myPosition = [position.coords.latitude, position.coords.longitude];
+  });
+  */
+  $scope.findMe = function() {
+    $ionicLoading.show({
+      template: '<ion-spinner icon="spiral" class="spinner-energized"></ion-spinner><br>{{text}}...',
+      scope: $scope
+    });
+    $ionicPlatform.ready(function() {
+      $cordovaGeolocation.getCurrentPosition(posOptions).then(function (position) {
+        var lat = parseFloat(position.coords.latitude);
+        var lon = parseFloat(position.coords.longitude);
+        lat = lat.toFixed(6);
+        lon = lon.toFixed(6);
+        $scope.myPosition = [lat, lon];
+        $ionicLoading.hide();
+      }, function(err) {
+        $scope.text = err.message;
+      });
+    });
+  };
+})
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 .controller('ProximiioCtrl', function($scope, myProximiio) {
   $scope.text_test = "Este texto es de prueba";
   $scope.Login = function() {
@@ -100,48 +142,6 @@ angular.module('starter.controllers', [])
 //------------------------------------------------------------------------------
 .controller('CordovaCtrl', function($scope, $ionicPlatform) {
 
-})
-//------------------------------------------------------------------------------
-//------------------------------------------------------------------------------
-.controller('LocationCtrl', function($scope, $ionicLoading, $ionicPlatform, $cordovaGeolocation, myProximiio) {
-  $scope.text = "Loading..."
-  $scope.myPosition = [32.506511, -116.923950];
-  var posOptions = {
-    timeout: 10000,
-    enableHighAccuracy: false
-  };
-  /*
-  var watchOptions = {
-    timeout : 3000,
-    enableHighAccuracy: false
-  };
-  var watch = $cordovaGeolocation.watchPosition(watchOptions);
-  watch.then(null, function(err) {
-    // error
-  }, function(position) {
-    var lat  = position.coords.latitude
-    var long = position.coords.longitude
-    $scope.myPosition = [position.coords.latitude, position.coords.longitude];
-  });
-  */
-  $scope.findMe = function() {
-    $ionicLoading.show({
-      template: '<ion-spinner icon="spiral" class="spinner-energized"></ion-spinner><br>{{text}}...',
-      scope: $scope
-    });
-    $ionicPlatform.ready(function() {
-      $cordovaGeolocation.getCurrentPosition(posOptions).then(function (position) {
-        var lat = parseFloat(position.coords.latitude);
-        var lon = parseFloat(position.coords.longitude);
-        lat = lat.toFixed(6);
-        lon = lon.toFixed(6);
-        $scope.myPosition = [lat, lon];
-        $ionicLoading.hide();
-      }, function(err) {
-        $scope.text = err.message;
-      });
-    });
-  };
 })
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------

@@ -1,4 +1,12 @@
 {
   "name": "uCanSee",
-  "app_id": "bff8c215"
+  "app_id": "bff8c215",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
 }

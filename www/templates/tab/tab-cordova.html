@@ -1,5 +1,24 @@
 <ion-view view-title="Cordova">
   <ion-content class="padding">
-    Cordova Plugins:
+    <div class="card">
+      <div class="item item-divider">$cordovaVibration</div>
+      <div class="item item-text-wrap">
+        <button class="button button-full button-balanced" ng-click="cordova_Vibration()">Vibrate</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="item item-divider">$cordovaBarcodeScanner</div>
+      <div class="item item-text-wrap">
+        <button class="button button-full button-balanced" ng-click="cordova_BarcodeScanner()">Scan</button>
+        {{BarcodeData}}
+      </div>
+    </div>
+    <div class="card">
+      <div class="item item-divider">$cordovaGeolocationSource</div>
+      <div class="item item-text-wrap">
+        <button class="button button-full button-balanced" ng-click="cordova_Geolocation()">Get Location</button>
+        {{myPosition}}
+      </div>
+    </div>
   </ion-content>
 </ion-view>

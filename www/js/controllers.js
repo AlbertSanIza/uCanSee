@@ -140,8 +140,32 @@ angular.module('starter.controllers', [])
 })
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
-.controller('CordovaCtrl', function($scope, $ionicPlatform) {
-
+.controller('CordovaCtrl', function($scope, $ionicPlatform, $cordovaVibration, $cordovaBarcodeScanner, $cordovaGeolocation) {
+  $scope.cordova_Vibration = function() {
+    $ionicPlatform.ready(function() {
+      $cordovaVibration.vibrate(100);
+    });
+  };
+  $scope.BarcodeData = "It will appear here...";
+  $scope.cordova_BarcodeScanner = function() {
+    $ionicPlatform.ready(function() {
+      $cordovaBarcodeScanner.scan().then(function(barcodeData) {
+        $scope.BarcodeData = barcodeData;
+      }, function(error) {
+      });
+    });
+  };
+  $scope.myPosition = [32.506511, -116.923950];
+  $scope.cordova_Geolocation = function() {
+    $ionicPlatform.ready(function() {
+      $cordovaGeolocation.getCurrentPosition({timeout: 10000, enableHighAccuracy: false}).then(function (position) {
+        var lat = parseFloat(position.coords.latitude);
+        var lon = parseFloat(position.coords.longitude);
+        $scope.myPosition = [lat.toFixed(6), lon.toFixed(6)];
+      }, function(err) {
+      });
+    });
+  };
 })
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------

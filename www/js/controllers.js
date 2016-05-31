@@ -98,6 +98,11 @@ angular.module('starter.controllers', [])
 })
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
+.controller('CordovaCtrl', function($scope, $ionicPlatform) {
+
+})
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 .controller('LocationCtrl', function($scope, $ionicLoading, $ionicPlatform, $cordovaGeolocation, myProximiio) {
   $scope.text = "Loading..."
   $scope.myPosition = [32.506511, -116.923950];

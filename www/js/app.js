@@ -55,6 +55,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       }
     }
   });
+  $stateProvider.state('tab.cordova', {
+    url: '/cordova',
+    views: {
+      'tab-cordova': {
+        templateUrl: 'templates/tab/tab-cordova.html',
+        controller: 'CordovaCtrl'
+      }
+    }
+  });
   $stateProvider.state('tab.location', {
     url: '/location',
     views: {

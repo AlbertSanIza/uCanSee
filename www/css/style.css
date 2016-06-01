@@ -5,3 +5,6 @@ ng-map {
 .scroll, .mapWrap {
   height: 100%;
 }
+.pane {
+  background-color: #E3F2FD;
+}

@@ -1,14 +1,13 @@
 <ion-view>
-  <ion-nav-title>
-    <span style="color:black">uCanSee!</span>
-  </ion-nav-title>
-  <ion-content padding="true" scroll="false">
-    <img class="full-image" src="img/cetys_logo_white.jpg">
-    <div class="card">
-      <div class="item item-text-wrap">
-        <button class="button button-block button-balanced" ng-click="login()">SIGN IN</button>
-        <button class="button button-block button-dark" ng-click="register()">REGISTER</button>
-      </div>
-    </div>
+  <ion-content padding="true" scroll="false" style="background-color: black;">
+    <img class="full-image" src="img/cetys_logo_black.jpg">
+    <button class="button button-block button-stable" ng-click="register()">
+      <b>REGISTER</b>
+    </button>
+    <button class="button button-block button-energized" ng-click="login()">
+      <span style="color:black">
+        <b>SIGN IN</b>
+      </span>
+    </button>
   </ion-content>
 </ion-view>

@@ -12,6 +12,7 @@
   <preference name="webviewbounce" value="false"/>
   <preference name="UIWebViewBounce" value="false"/>
   <preference name="DisallowOverscroll" value="true"/>
+  <preference name="ShowSplashScreenSpinner" value="false"/> 
   <preference name="SplashScreenDelay" value="2000"/>
   <preference name="FadeSplashScreenDuration" value="1000"/>
   <preference name="android-minSdkVersion" value="18"/>

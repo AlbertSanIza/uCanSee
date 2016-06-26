@@ -1,7 +1,5 @@
 //------------------------------------------------------------------------------
-//------------------------------------------------------------------------------
 angular.module('starter.controllers', [])
-//------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 .controller('IntroCtrl', function($scope, $state, uCanSee) {
   $scope.login = function() {
@@ -11,7 +9,6 @@ angular.module('starter.controllers', [])
     $state.go('register');
   };
 })
-//------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 .controller('LoginCtrl', function($scope, $state, $ionicPlatform, $cordovaVibration, uCanSee) {
   $scope.uCanSee = uCanSee.Fire;
@@ -29,11 +26,9 @@ angular.module('starter.controllers', [])
   };
 })
 //------------------------------------------------------------------------------
-//------------------------------------------------------------------------------
 .controller('RegisterCtrl', function($scope, uCanSee) {
   $scope.uCanSee = uCanSee.Fire;
 })
-//------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 .controller('DashboardCtrl', function($scope, $ionicPlatform, uCanSee) {
   $scope.uCanSee = uCanSee;
@@ -80,7 +75,6 @@ angular.module('starter.controllers', [])
     });
   };
 })
-//------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 .controller('ProximiioCtrl', function($scope, myProximiio) {
   $scope.text_test = "Este texto es de prueba";
@@ -139,7 +133,6 @@ angular.module('starter.controllers', [])
   };
 })
 //------------------------------------------------------------------------------
-//------------------------------------------------------------------------------
 .controller('CordovaCtrl', function($scope, $ionicPlatform, $cordovaVibration, $cordovaBarcodeScanner, $cordovaGeolocation) {
   $scope.cordova_Vibration = function() {
     $ionicPlatform.ready(function() {
@@ -167,5 +160,4 @@ angular.module('starter.controllers', [])
     });
   };
 })
-//------------------------------------------------------------------------------
 //------------------------------------------------------------------------------

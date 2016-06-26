@@ -1,7 +1,5 @@
 //------------------------------------------------------------------------------
-//------------------------------------------------------------------------------
 angular.module('starter', ['ionic', 'starter.controllers', 'starter.directives', 'starter.services', 'ngCordova', 'ngMap', 'firebase'])
-//------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -14,7 +12,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.directives',
     }
   });
 })
-//------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider.state('intro', {
@@ -75,5 +72,4 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.directives',
   });
   $urlRouterProvider.otherwise('/intro');
 })
-//------------------------------------------------------------------------------
 //------------------------------------------------------------------------------

@@ -36,6 +36,10 @@ angular.module('starter.controllers', [])
 //------------------------------------------------------------------------------
 .controller('ChallengeCtrl', function($scope, $ionicPlatform, uCanSee) {
   $scope.uCanSee = uCanSee;
+  $scope.Challenges = [
+    {id: 0, name: "Karma", locked: true},
+    {id: 1, name: "Orange", locked: false}
+  ];
 })
 //------------------------------------------------------------------------------
 .controller('LocationCtrl', function($scope, $ionicLoading, $ionicPlatform, $cordovaGeolocation, myProximiio) {

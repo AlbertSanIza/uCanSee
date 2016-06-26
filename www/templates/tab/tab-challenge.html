@@ -2,7 +2,11 @@
   <ion-nav-title>
     <span style="color:black">Challenge</span>
   </ion-nav-title>
-  <ion-content class="padding">
-    Hello World!
+  <ion-content scroll="false">
+    <ion-slide-box>
+      <ion-slide ng-repeat="fun in Challenges">
+        <challenge-card info="fun"></challenge-card>
+      </ion-slide>
+    </ion-slide-box>
   </ion-content>
 </ion-view>

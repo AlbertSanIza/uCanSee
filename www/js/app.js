@@ -43,6 +43,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.directives',
       }
     }
   });
+  $stateProvider.state('tab.challenge', {
+    url: '/challenge',
+    views: {
+      'tab-challenge': {
+        templateUrl: 'templates/tab/tab-challenge.html',
+        controller: 'ChallengeCtrl'
+      }
+    }
+  });
   $stateProvider.state('tab.location', {
     url: '/location',
     views: {

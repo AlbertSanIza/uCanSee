@@ -34,6 +34,9 @@ angular.module('starter.controllers', [])
   $scope.uCanSee = uCanSee;
 })
 //------------------------------------------------------------------------------
+.controller('ChallengeCtrl', function($scope, $ionicPlatform, uCanSee) {
+  $scope.uCanSee = uCanSee;
+})
 //------------------------------------------------------------------------------
 .controller('LocationCtrl', function($scope, $ionicLoading, $ionicPlatform, $cordovaGeolocation, myProximiio) {
   $scope.text = "Loading..."

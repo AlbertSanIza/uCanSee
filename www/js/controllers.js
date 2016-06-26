@@ -37,8 +37,10 @@ angular.module('starter.controllers', [])
 .controller('ChallengeCtrl', function($scope, $ionicPlatform, uCanSee) {
   $scope.uCanSee = uCanSee;
   $scope.Challenges = [
-    {id: 0, name: "Karma", locked: true},
-    {id: 1, name: "Orange", locked: false}
+    {id: 0, name: "Karma", locked: false, position: [32.506511, -116.923950]},
+    {id: 1, name: "Orange", locked: true},
+    {id: 2, name: "Fak", locked: true},
+    {id: 3, name: "Rog", locked: true}
   ];
 })
 //------------------------------------------------------------------------------

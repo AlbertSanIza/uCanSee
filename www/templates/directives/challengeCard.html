@@ -1,5 +1,14 @@
 <div class="card">
-  <div class="item item-text-wrap">
+  <div class="cardLocked" ng-show="info.locked">
+    <div class="cardLockedContent">
+      <i class="icon ion-locked"></i>
+    </div>
+  </div>
+  <div class="item item-text-wrap" ng-hide="info.locked">
     <h1>{{info.name}}</h1>
+    <ng-map center="{{info.position}}" zoom="17" disable-default-u-i="true">
+
+    </ng-map>
+    {{info}}
   </div>
 </div>

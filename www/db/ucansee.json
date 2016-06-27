@@ -40,19 +40,22 @@
       "id": 0,
       "proximiio": "",
       "name": "Karma",
-      "description": ""
+      "description": "",
+      "locked": false
     },
     {
       "id": 1,
       "proximiio": "",
       "name": "Karma",
-      "description": ""
+      "description": "",
+      "locked": true
     },
     {
       "id": 2,
       "proximiio": "",
       "name": "Karma",
-      "description": ""
+      "description": "",
+      "locked": true
     }
   ]
 }

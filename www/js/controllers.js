@@ -83,7 +83,7 @@ angular.module('starter.controllers', [])
       "name": "Orange Kiss",
       "description": "Team will form a line, team members must pass an orange using their necks. If the orange falls the team must begin at the start of the line.",
       "locked": false,
-      "img": "4.jpg"
+      "img": "5.jpg"
     },
     {
       "id": 6,

@@ -1,7 +1,7 @@
 {
   "teams": [
     {
-      "name": "Angular",
+      "name": "Full Code Alchemist",
       "short_name": "NG",
       "description": "Best Ever!",
       "password": "123",
@@ -9,6 +9,14 @@
         {
           "id": "19824",
           "name": "Albert Sanchez"
+        },
+        {
+          "id": "19390",
+          "name": "Manuel Medrano"
+        },
+        {
+          "id": "19981",
+          "name": "Ulysses Vazquez"
         }
       ]
     }

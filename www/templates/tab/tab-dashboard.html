@@ -3,16 +3,21 @@
     <span style="color:black">Dashboard</span>
   </ion-nav-title>
   <ion-content padding="true">
-    <h2>{{uCanSee.teams[0].name}}</h2>
-    <h4>"{{uCanSee.teams[0].description}}"</h4>
+    <div class="card">
+      <div class="item item-divider">
+        Team:
+      </div>
+      <div class="item item-text-wrap">
+        <h1>{{uCanSee.teams[0].name}}</h1>
+      </div>
+    </div>
     <div class="list">
       <div class="item item-divider">
         Team Members:
       </div>
       <div class="item" ng-repeat="member in uCanSee.teams[0].members">
-        {{member.name}}
+        {{member.id}} - {{member.name}}
       </div>
     </div>
-    {{uCanSee.teams[0]}}
   </ion-content>
 </ion-view>

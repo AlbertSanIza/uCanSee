@@ -35,18 +35,6 @@
           "name": ""
         }
       ]
-    },
-    {
-      "name": "Knockout",
-      "short_name": "KO",
-      "description": "meeh",
-      "password": "zxc",
-      "members": [
-        {
-          "id": "",
-          "name": ""
-        }
-      ]
     }
   ],
   "register": [

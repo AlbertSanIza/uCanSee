@@ -34,28 +34,5 @@
       "title": "Credits",
       "description": "This app was made by students of CETYS University using amazing technologies like Ionic, Proximi.io and Firebase"
     }
-  ],
-  "challenges": [
-    {
-      "id": 0,
-      "proximiio": "",
-      "name": "Karma",
-      "description": "",
-      "locked": false
-    },
-    {
-      "id": 1,
-      "proximiio": "",
-      "name": "Karma",
-      "description": "",
-      "locked": true
-    },
-    {
-      "id": 2,
-      "proximiio": "",
-      "name": "Karma",
-      "description": "",
-      "locked": true
-    }
   ]
 }

@@ -16,23 +16,33 @@
   "register": [
     {
       "title": "Register",
-      "description": "In order to register to this event, please send an email to me@cetys.mx by sendind the name and matricula of every student"
+      "description": "If you are interested in participating, please send an e-mail with the names and student ID’s of each member of the team and the team name to albert.sanchez@cetys.mx"
     },
     {
       "title": "Rules",
-      "description": "No mas de 5 miembros blablabal"
+      "description": "Teams must be composed of six members. All participants must be students of CETYS University and must follow the organizers instructions. Physical or verbal violence will result in automatic disqualification."
     },
     {
       "title": "Sponsors",
-      "description": "Coca-Cola, Fimbres Logos, Ingenium, Tooginos, etc."
+      "description": "to be defined..."
     },
     {
       "title": "Help",
-      "description": "Para cualquier duda o aclaracion favor de comunicarse aqui:"
+      "description": "For any questions please contact albert.sanchez@cetys.mx"
     },
     {
       "title": "Credits",
-      "description": "This app was made by students of CETYS University, and using some amazing technologies such as Proximi.io, Ionic Framework and Firebase"
+      "description": "This app was made by students of CETYS University using amazing technologies like Ionic, Proximi.io and Firebase"
+    }
+  ],
+  "challenges": [
+    {
+      "id": 0,
+      "name": "Karma"
+    },
+    {
+      "id": 1,
+      "name": "Karma"
     }
   ]
 }

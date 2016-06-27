@@ -41,7 +41,7 @@ angular.module('starter.controllers', [])
       "id": 0,
       "proximiio": "",
       "name": "Sack Relay Run",
-      "description": "Team must complete, a Sack Relay Run, one lap per team member",
+      "description": "Team must complete, a Sack Relay Run, one lap per team member.",
       "locked": false,
       "img": "0.jpg"
     },
@@ -49,7 +49,7 @@ angular.module('starter.controllers', [])
       "id": 1,
       "proximiio": "",
       "name": "Flour Basket",
-      "description": "Team will sit in a straight line, in the form of a caterpillar. Teams must pass backwards a drilled basket full of flour above their heads and if the basket is dropped activity starts again",
+      "description": "Team will sit in a straight line, in the form of a caterpillar. Teams must pass backwards a drilled basket full of flour above their heads and if the basket is dropped activity starts again.",
       "locked": false,
       "img": "1.jpg"
     },
@@ -57,7 +57,7 @@ angular.module('starter.controllers', [])
       "id": 2,
       "proximiio": "",
       "name": "Water Balloon Harvest",
-      "description": "Organizers will throw water balloons, teams will need to catch them with a basket. At least 10 successful balloon catch are necessary to complete the stage",
+      "description": "Organizers will throw water balloons, teams will need to catch them with a basket. At least 10 successful balloon catch are necessary to complete the stage.",
       "locked": false,
       "img": "2.jpg"
     },
@@ -65,7 +65,7 @@ angular.module('starter.controllers', [])
       "id": 3,
       "proximiio": "",
       "name": "Obstacle Run",
-      "description": "Teams will be divided in pairs and each pair will tie themselves by the feet. All pairs must complete the obstacle run",
+      "description": "Teams will be divided in pairs and each pair will tie themselves by the feet. All pairs must complete the obstacle run.",
       "locked": false,
       "img": "3.jpg"
     },
@@ -73,7 +73,7 @@ angular.module('starter.controllers', [])
       "id": 4,
       "proximiio": "",
       "name": "Balloon Popping",
-      "description": "Each team member must complete a lap and blow up a balloon with another team member by pressing their chest",
+      "description": "Each team member must complete a lap and blow up a balloon with another team member by pressing their chest.",
       "locked": false,
       "img": "4.jpg"
     },
@@ -81,7 +81,7 @@ angular.module('starter.controllers', [])
       "id": 5,
       "proximiio": "",
       "name": "Orange Kiss",
-      "description": "Team will form a line, team members must pass an orange using their necks. If the orange falls the team must begin at the start of the line",
+      "description": "Team will form a line, team members must pass an orange using their necks. If the orange falls the team must begin at the start of the line.",
       "locked": false,
       "img": "4.jpg"
     },
@@ -89,7 +89,7 @@ angular.module('starter.controllers', [])
       "id": 6,
       "proximiio": "",
       "name": "Clothes Line",
-      "description": "Team must use all of their usable clothes (if they want) to make a line of clothes in order to reach the other side of the field",
+      "description": "Team must use all of their usable clothes (if they want) to make a line of clothes in order to reach the other side of the field.",
       "locked": false,
       "img": "6.jpg"
     }

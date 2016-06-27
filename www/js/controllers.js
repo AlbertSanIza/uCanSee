@@ -31,16 +31,68 @@ angular.module('starter.controllers', [])
 })
 //------------------------------------------------------------------------------
 .controller('DashboardCtrl', function($scope, $ionicPlatform, uCanSee) {
-  $scope.uCanSee = uCanSee;
+  $scope.uCanSee = uCanSee.Fire;
 })
 //------------------------------------------------------------------------------
 .controller('ChallengeCtrl', function($scope, $ionicPlatform, uCanSee) {
-  $scope.uCanSee = uCanSee;
+  $scope.uCanSee = uCanSee.Fire;
   $scope.Challenges = [
-    {id: 0, name: "Karma", locked: false, position: [32.506511, -116.923950]},
-    {id: 1, name: "Orange", locked: true},
-    {id: 2, name: "Fak", locked: true},
-    {id: 3, name: "Rog", locked: true}
+    {
+      "id": 0,
+      "proximiio": "",
+      "name": "Karma",
+      "description": "Aqui deberia haber una pequeña descripcion",
+      "locked": false
+    },
+    {
+      "id": 1,
+      "proximiio": "",
+      "name": "Karma",
+      "description": "",
+      "locked": false
+    },
+    {
+      "id": 2,
+      "proximiio": "",
+      "name": "Karma",
+      "description": "",
+      "locked": false
+    },
+    {
+      "id": 3,
+      "proximiio": "",
+      "name": "Karma",
+      "description": "",
+      "locked": true
+    },
+    {
+      "id": 4,
+      "proximiio": "",
+      "name": "Karma",
+      "description": "",
+      "locked": true
+    },
+    {
+      "id": 5,
+      "proximiio": "",
+      "name": "Karma",
+      "description": "",
+      "locked": true
+    },
+    {
+      "id": 6,
+      "proximiio": "",
+      "name": "Karma",
+      "description": "",
+      "locked": true
+    },
+    {
+      "id": 7,
+      "proximiio": "",
+      "name": "Karma",
+      "description": "",
+      "locked": true
+    }
   ];
 })
 //------------------------------------------------------------------------------

@@ -7,6 +7,9 @@
   <div class="item item-text-wrap" ng-hide="info.locked">
     <h1>{{info.name}}</h1>
     <ng-map center="{{info.position}}" zoom="17" disable-default-u-i="true"></ng-map>
-    {{info}}
+    <button class="button button-block button-positive">
+      Scan Code
+    </button>
+    {{info.description}}
   </div>
 </div>

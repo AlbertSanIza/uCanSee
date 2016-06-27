@@ -9,7 +9,7 @@ ng-map {
   background-color: #404040;
 }
 .slider {
-  height: 100%;
+  height: calc(100% - 7px);
 }
 .cardCustom {
   height: calc(100% - 31px);

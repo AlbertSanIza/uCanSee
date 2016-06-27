@@ -98,11 +98,8 @@ angular.module('starter.controllers', [])
     for (var i = 0; i < data.length; i++) {
       for (var j = 0; j < $scope.Challenges.length; j++) {
         if(data[i].id == $scope.Challenges[j].proximiio) {
-          console.log(data[i]);
           $scope.Challenges[j].position = [data[i].area.lat, data[i].area.lng];
           $scope.Challenges[j].radius = data[i].radius;
-        } else {
-          console.log(data[i]);
         }
       }
     };

@@ -11,30 +11,6 @@
           "name": "Albert Sanchez"
         }
       ]
-    },
-    {
-      "name": "Backbone",
-      "short_name": "BB",
-      "description": "Never understood",
-      "password": "qwe",
-      "members": [
-        {
-          "id": "",
-          "name": ""
-        }
-      ]
-    },
-    {
-      "name": "Ember",
-      "short_name": "EM",
-      "description": "wtf?",
-      "password": "asd",
-      "members": [
-        {
-          "id": "",
-          "name": ""
-        }
-      ]
     }
   ],
   "register": [

@@ -40,58 +40,58 @@ angular.module('starter.controllers', [])
     {
       "id": 0,
       "proximiio": "",
-      "name": "Karma",
-      "description": "Aqui deberia haber una pequeña descripcion",
-      "locked": false
+      "name": "Sack Relay Run",
+      "description": "Team must complete, a Sack Relay Run, one lap per team member",
+      "locked": false,
+      "img": "0.jpg"
     },
     {
       "id": 1,
       "proximiio": "",
-      "name": "Karma",
-      "description": "",
-      "locked": false
+      "name": "Flour Basket",
+      "description": "Team will sit in a straight line, in the form of a caterpillar. Teams must pass backwards a drilled basket full of flour above their heads and if the basket is dropped activity starts again",
+      "locked": false,
+      "img": "1.jpg"
     },
     {
       "id": 2,
       "proximiio": "",
-      "name": "Karma",
-      "description": "",
-      "locked": false
+      "name": "Water Balloon Harvest",
+      "description": "Organizers will throw water balloons, teams will need to catch them with a basket. At least 10 successful balloon catch are necessary to complete the stage",
+      "locked": false,
+      "img": "2.jpg"
     },
     {
       "id": 3,
       "proximiio": "",
-      "name": "Karma",
-      "description": "",
-      "locked": true
+      "name": "Obstacle Run",
+      "description": "Teams will be divided in pairs and each pair will tie themselves by the feet. All pairs must complete the obstacle run",
+      "locked": false,
+      "img": "3.jpg"
     },
     {
       "id": 4,
       "proximiio": "",
-      "name": "Karma",
-      "description": "",
-      "locked": true
+      "name": "Balloon Popping",
+      "description": "Each team member must complete a lap and blow up a balloon with another team member by pressing their chest",
+      "locked": false,
+      "img": "4.jpg"
     },
     {
       "id": 5,
       "proximiio": "",
-      "name": "Karma",
-      "description": "",
-      "locked": true
+      "name": "Orange Kiss",
+      "description": "Team will form a line, team members must pass an orange using their necks. If the orange falls the team must begin at the start of the line",
+      "locked": false,
+      "img": "4.jpg"
     },
     {
       "id": 6,
       "proximiio": "",
-      "name": "Karma",
-      "description": "",
-      "locked": true
-    },
-    {
-      "id": 7,
-      "proximiio": "",
-      "name": "Karma",
-      "description": "",
-      "locked": true
+      "name": "Clothes Line",
+      "description": "Team must use all of their usable clothes (if they want) to make a line of clothes in order to reach the other side of the field",
+      "locked": false,
+      "img": "6.jpg"
     }
   ];
 })

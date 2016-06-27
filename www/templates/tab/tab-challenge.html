@@ -4,6 +4,15 @@
   </ion-nav-title>
   <ion-content scroll="false">
     <ion-slide-box>
+      <ion-slide>
+        <div class="card cardCustom">
+          <div class="item item-text-wrap" style="text-align: center;">
+            <br><br><br>
+            <i class="ion-happy-outline" style="font-size: 300px;"></i>
+            <h1>Swipe to get started!</h1>
+          </div>
+        </div>
+      </ion-slide>
       <ion-slide ng-repeat="challenge in Challenges">
         <challenge-card info="challenge"></challenge-card>
       </ion-slide>

@@ -38,11 +38,21 @@
   "challenges": [
     {
       "id": 0,
-      "name": "Karma"
+      "proximiio": "",
+      "name": "Karma",
+      "description": ""
     },
     {
       "id": 1,
-      "name": "Karma"
+      "proximiio": "",
+      "name": "Karma",
+      "description": ""
+    },
+    {
+      "id": 2,
+      "proximiio": "",
+      "name": "Karma",
+      "description": ""
     }
   ]
 }

@@ -5,11 +5,11 @@
   <ion-content>
     <div class="list card">
       <div class="item item-divider">
-        Select your Team
+        Select your Team:
       </div>
       <ion-radio ng-repeat="Team in uCanSee.teams" ng-value="$index" ng-model="userData.index">{{Team.name}}</ion-radio>
       <div class="item item-divider">
-        Enter your Team Password
+        Enter your Team Password:
       </div>
       <label class="item item-input">
         <input type="tel" style="text-align:center;" placeholder="Provided by uCanSee Staff" ng-model="userData.password">

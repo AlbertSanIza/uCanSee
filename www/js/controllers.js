@@ -36,7 +36,7 @@ angular.module('starter.controllers', [])
 .controller('RegisterCtrl', function($scope) {
 })
 //------------------------------------------------------------------------------
-.controller('DashboardCtrl', function($scope, $ionicPlatform, uCanSee) {
+.controller('DashboardCtrl', function($scope, uCanSee) {
   $scope.uCanSee = uCanSee.Fire;
 })
 //------------------------------------------------------------------------------

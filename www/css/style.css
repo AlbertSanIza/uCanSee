@@ -52,6 +52,6 @@ ng-map {
   transform: translateY(-50%);
 }
 .spinner svg {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
 }

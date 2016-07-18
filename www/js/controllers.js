@@ -33,8 +33,7 @@ angular.module('starter.controllers', [])
   };
 })
 //------------------------------------------------------------------------------
-.controller('RegisterCtrl', function($scope, uCanSee) {
-  $scope.uCanSee = uCanSee.Fire;
+.controller('RegisterCtrl', function($scope) {
 })
 //------------------------------------------------------------------------------
 .controller('DashboardCtrl', function($scope, $ionicPlatform, uCanSee) {

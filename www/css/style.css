@@ -46,3 +46,8 @@ ng-map {
 .locationMap {
   height: 100% !important;
 }
+.centerFace {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}

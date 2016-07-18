@@ -10,7 +10,7 @@ angular.module('starter.controllers', [])
   };
 })
 //------------------------------------------------------------------------------
-.controller('LoginCtrl', function($scope, $state, $timeout, $ionicPlatform, $ionicLoading, uCanSee) {
+.controller('LoginCtrl', function($scope, $state, $timeout, $ionicLoading, uCanSee) {
   $scope.uCanSee = uCanSee.Fire;
   $scope.userData = new Object();
   $scope.signIn = function(param) {
@@ -20,7 +20,7 @@ angular.module('starter.controllers', [])
       $timeout(function () {
         $state.go('tab.dashboard');
         $ionicLoading.hide();
-      }, 1300);
+      }, 1500);
     } else {
       $scope.userData.password = "";
     }

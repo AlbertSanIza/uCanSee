@@ -51,3 +51,7 @@ ng-map {
   top: 50%;
   transform: translateY(-50%);
 }
+.spinner svg {
+  width: 100px;
+  height: 100px;
+}

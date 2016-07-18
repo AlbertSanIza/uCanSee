@@ -24,7 +24,7 @@ angular.module('starter.controllers', [])
     } else {
       var alertPopup = $ionicPopup.alert({
         title: 'Wrong Password',
-        template: '<div style="text-align: center;">Please try again, or contact uCanSee support</div>'
+        templateUrl: 'templates/ionic/popup.html'
       });
       alertPopup.then(function(res) {
         $scope.userData.password = "";

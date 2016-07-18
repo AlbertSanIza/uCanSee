@@ -14,6 +14,6 @@ angular.module('starter', ['ionic', 'starter.router', 'starter.controllers', 'st
 })
 //------------------------------------------------------------------------------
 .constant('$ionicLoadingConfig', {
-  template: '<ion-spinner icon="ripple" class="spinner-calm"></ion-spinner><br>Loading...'
+  templateUrl: 'templates/ionic/loading.html'
 })
 //------------------------------------------------------------------------------

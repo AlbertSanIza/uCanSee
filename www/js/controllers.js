@@ -10,16 +10,17 @@ angular.module('starter.controllers', [])
   };
 })
 //------------------------------------------------------------------------------
-.controller('LoginCtrl', function($scope, $state, $ionicPlatform, $cordovaVibration, uCanSee) {
+.controller('LoginCtrl', function($scope, $state, $timeout, $ionicPlatform, $ionicLoading, uCanSee) {
   $scope.uCanSee = uCanSee.Fire;
   $scope.userData = new Object();
   $scope.signIn = function(param) {
     if(param.password == $scope.uCanSee.teams[param.index].password) {
       uCanSee.Index = param.index;
-      $ionicPlatform.ready(function() {
-        //$cordovaVibration.vibrate(100);
+      $ionicLoading.show();
+      $timeout(function () {
         $state.go('tab.dashboard');
-      });
+        $ionicLoading.hide();
+      }, 1300);
     } else {
       $scope.userData.password = "";
     }

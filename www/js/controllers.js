@@ -10,7 +10,7 @@ angular.module('starter.controllers', [])
   };
 })
 //------------------------------------------------------------------------------
-.controller('LoginCtrl', function($scope, $state, $timeout, $ionicLoading, uCanSee) {
+.controller('LoginCtrl', function($scope, $state, $timeout, $ionicLoading, $ionicPopup, uCanSee) {
   $scope.uCanSee = uCanSee.Fire;
   $scope.userData = new Object();
   $scope.signIn = function(param) {
@@ -20,9 +20,15 @@ angular.module('starter.controllers', [])
       $timeout(function () {
         $state.go('tab.dashboard');
         $ionicLoading.hide();
-      }, 1500);
+      }, 2000);
     } else {
-      $scope.userData.password = "";
+      var alertPopup = $ionicPopup.alert({
+        title: 'Wrong Password',
+        template: '<div style="text-align: center;">Please try again, or contact uCanSee support</div>'
+      });
+      alertPopup.then(function(res) {
+        $scope.userData.password = "";
+      });
     }
   };
 })

@@ -3,24 +3,26 @@
     <span style="color:black">SIGN IN</span>
   </ion-nav-title>
   <ion-content>
-    <div class="list card">
-      <div class="item item-divider">
-        Select your Team:
+    <form>
+      <div class="list card">
+        <div class="item item-divider">
+          Select your Team:
+        </div>
+        <ion-radio ng-repeat="Team in uCanSee.teams" ng-value="$index" ng-model="userData.index">{{Team.name}}</ion-radio>
+        <div class="item item-divider">
+          Enter your Team Password:
+        </div>
+        <label class="item item-input">
+          <input type="tel" style="text-align:center;" placeholder="Provided by uCanSee Staff" ng-model="userData.password">
+        </label>
       </div>
-      <ion-radio ng-repeat="Team in uCanSee.teams" ng-value="$index" ng-model="userData.index">{{Team.name}}</ion-radio>
-      <div class="item item-divider">
-        Enter your Team Password:
+      <div class="padding">
+        <button class="button button-block button-energized" ng-disabled="userData.index == null || !userData.password" ng-click="signIn(userData)">
+          <span style="color:black">
+            <b>SIGN IN NOW!</b>
+          </span>
+        </button>
       </div>
-      <label class="item item-input">
-        <input type="tel" style="text-align:center;" placeholder="Provided by uCanSee Staff" ng-model="userData.password">
-      </label>
-    </div>
-    <div class="padding">
-      <button class="button button-block button-energized" ng-disabled="userData.index == null || !userData.password" ng-click="signIn(userData)">
-        <span style="color:black">
-          <b>SIGN IN NOW!</b>
-        </span>
-      </button>
-    </div>
+    </form>
   </ion-content>
 </ion-view>

@@ -1,25 +1,21 @@
 <ion-view>
   <ion-nav-title>
-    <span style="color:black">SIGN IN</span>
+    <span style="color:black">{{'_SIGN_IN' | translate}}</span>
   </ion-nav-title>
   <ion-content>
     <form>
       <div class="list card">
-        <div class="item item-divider">
-          Select your Team:
-        </div>
+        <div class="item item-divider">{{'_SELECT_TEAM' | translate}}:</div>
         <ion-radio ng-repeat="Team in uCanSee.teams" ng-value="$index" ng-model="userData.index">{{Team.name}}</ion-radio>
-        <div class="item item-divider">
-          Enter your Team Password:
-        </div>
+        <div class="item item-divider">{{'_ENTER_PASSWORD' | translate}}:</div>
         <label class="item item-input">
-          <input type="tel" style="text-align:center;" placeholder="Provided by uCanSee Staff" ng-model="userData.password">
+          <input type="tel" style="text-align:center;" placeholder="{{'_PBS' | translate}}" ng-model="userData.password">
         </label>
       </div>
       <div class="padding">
         <button class="button button-block button-energized" ng-disabled="userData.index == null || !userData.password" ng-click="signIn(userData)">
           <span style="color:black">
-            <b>SIGN IN NOW!</b>
+            <b>{{'_SIGN_IN_NOW' | translate}}!</b>
           </span>
         </button>
       </div>

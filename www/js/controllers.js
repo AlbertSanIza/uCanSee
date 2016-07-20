@@ -49,21 +49,26 @@ angular.module('starter.controllers', [])
 })
 //------------------------------------------------------------------------------
 .controller('LocationCtrl', function($scope, $timeout, $ionicLoading, $ionicPlatform, $cordovaGeolocation, myChallenge) {
+  var theTimeout;
   $scope.locatorOn = false;
   $scope.Challenges = myChallenge.tasks;
-  $scope.text = "Loading..."
   $scope.myPosition = [32.506511, -116.923950];
   var posOptions = {
     timeout: 10000,
     enableHighAccuracy: false
   };
   $scope.findMe = function() {
-    $scope.locatorOn = true;
-    $ionicLoading.show({
-      template: '<ion-spinner icon="spiral" class="spinner-energized"></ion-spinner><br>{{text}}...',
-      scope: $scope
-    });
+    if($scope.locatorOn == false) {
+      $scope.locatorOn = true;
+      loop();
+    }
+  };
+  function Geolocation() {
     $ionicPlatform.ready(function() {
+      $ionicLoading.show({
+        template: '<ion-spinner icon="spiral" class="spinner-energized"></ion-spinner><br>{{text}}...',
+        scope: $scope
+      });
       $cordovaGeolocation.getCurrentPosition(posOptions).then(function (position) {
         var lat = parseFloat(position.coords.latitude);
         var lon = parseFloat(position.coords.longitude);
@@ -71,7 +76,11 @@ angular.module('starter.controllers', [])
         lon = lon.toFixed(6);
         $scope.myPosition = [lat, lon];
         $ionicLoading.hide();
+        $timeout(function () {
+          loop();
+        }, 1500);
       }, function(err) {
+        $timeout.cancel(theTimeout);
         $scope.locatorOn = false;
         $scope.text = err.message;
         $timeout(function() {
@@ -79,6 +88,11 @@ angular.module('starter.controllers', [])
         }, 3000);
       });
     });
+  };
+  function loop() {
+    if($scope.locatorOn == true) {
+      Geolocation();
+    }
   };
 })
 //------------------------------------------------------------------------------

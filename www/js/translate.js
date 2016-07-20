@@ -45,7 +45,7 @@ angular.module('starter.translate', ['pascalprecht.translate'])
       '_RULES': 'Reglas',
       '_RULES_INFO_1': 'El equipo debe ser de 6 integrantes. Todos deben ser estudiantes de CETYS universidad y deben seguir las instrucciones de los organizadores. Cualquier tipo de agresión fisica o verbal resultará en la descalificación de todo el equipo ',
       '_SPONSORS': 'Patrocinadores',
-      '_SPONSORS_INFO_1': 'Por definirse',
+      '_SPONSORS_INFO_1': 'Por definirse...',
       '_HELP': 'AIUUDA',
       '_HELP_INFO_1': 'Para cualquier aclaración contactar a albert.sanchez@cetys.mx',
       '_CREDITS': 'Proveida por uCanSee Staff',

@@ -1,7 +1,7 @@
 //------------------------------------------------------------------------------
 angular.module('starter.controllers', [])
 //------------------------------------------------------------------------------
-.controller('IntroCtrl', function($scope, $state, $translate, uCanSee, myChallenge) {
+.controller('IntroCtrl', function($scope, $state, $translate, uCanSee, myChallenge, myLocation) {
   $scope.login = function() {
     $state.go('login');
   };
@@ -39,7 +39,7 @@ angular.module('starter.controllers', [])
 .controller('RegisterCtrl', function($scope) {
 })
 //------------------------------------------------------------------------------
-.controller('DashboardCtrl', function($scope, uCanSee, myLocation) {
+.controller('DashboardCtrl', function($scope, uCanSee) {
   $scope.uCanSee = uCanSee.Fire;
 })
 //------------------------------------------------------------------------------

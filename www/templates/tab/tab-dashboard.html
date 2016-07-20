@@ -4,20 +4,14 @@
   </ion-nav-title>
   <ion-content padding="true">
     <div class="card">
-      <div class="item item-divider">
-        {{'_TEAM' | translate}}:
-      </div>
+      <div class="item item-divider">{{'_TEAM' | translate}}:</div>
       <div class="item item-text-wrap">
-        <h1>{{uCanSee.teams[0].name}}</h1>
+        <h1>{{Firebase.teams[0].name}}</h1>
       </div>
     </div>
     <div class="list">
-      <div class="item item-divider">
-        {{'_TEAM_MEMBERS' | translate}}:
-      </div>
-      <div class="item" ng-repeat="member in uCanSee.teams[0].members">
-        {{member.id}} - {{member.name}}
-      </div>
+      <div class="item item-divider">{{'_TEAM_MEMBERS' | translate}}:</div>
+      <div class="item" ng-repeat="Member in Firebase.teams[0].members">{{Member.id}} - {{Member.name}}</div>
     </div>
   </ion-content>
 </ion-view>

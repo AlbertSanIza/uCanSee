@@ -36,8 +36,8 @@ angular.module('starter.controllers', [])
 .controller('RegisterCtrl', function($scope) {
 })
 //------------------------------------------------------------------------------
-.controller('DashboardCtrl', function($scope, uCanSee) {
-  $scope.uCanSee = uCanSee.Fire;
+.controller('DashboardCtrl', function($scope, myFirebase) {
+  $scope.Firebase = myFirebase.data;
 })
 //------------------------------------------------------------------------------
 .controller('ChallengeCtrl', function($scope, uCanSee, myChallenge, myLocation) {

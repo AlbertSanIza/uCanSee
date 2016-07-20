@@ -9,7 +9,7 @@
     <button class="button button-icon ion-navigate" ng-click="findMe()"></button>
   </ion-nav-buttons>
   <ion-content class="padding" padding="false" scroll="false" has-subheader="true">
-    <ng-map class="locationMap" center="{{myPosition}}" zoom="17" disable-default-u-i="true" zoom-control="true">
+    <ng-map class="locationMap" center="{{myPosition}}" zoom="17" disable-default-u-i="true" zoom-control="true" scrollwheel="false" draggable="false">
       <marker position="{{myPosition}}" title="My Position"></marker>
     </ng-map>
   </ion-content>

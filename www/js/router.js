@@ -49,24 +49,6 @@ angular.module('starter.router', [])
       }
     }
   });
-  $stateProvider.state('tab.proximiio', {
-    url: '/proximiio',
-    views: {
-      'tab-proximiio': {
-        templateUrl: 'templates/tab/tab-proximiio.html',
-        controller: 'ProximiioCtrl'
-      }
-    }
-  });
-  $stateProvider.state('tab.cordova', {
-    url: '/cordova',
-    views: {
-      'tab-cordova': {
-        templateUrl: 'templates/tab/tab-cordova.html',
-        controller: 'CordovaCtrl'
-      }
-    }
-  });
   $urlRouterProvider.otherwise('/intro');
 })
 //------------------------------------------------------------------------------

@@ -20,6 +20,7 @@ angular.module('starter.controllers', [])
     $ionicLoading.show();
     $timeout(function () {
       if(input.password == $scope.Firebase.teams[input.index].password) {
+        myFirebase.index = input.index;
         $state.go('tab.dashboard');
         $ionicLoading.hide();
       } else {

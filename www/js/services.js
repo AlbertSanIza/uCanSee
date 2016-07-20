@@ -1,5 +1,5 @@
 //------------------------------------------------------------------------------
-angular.module('starter.services', [])
+angular.module('starter.services', ['firebase'])
 //------------------------------------------------------------------------------
 .factory("myLocation", function($timeout, $ionicPlatform, $cordovaGeolocation) {
   var info = {};
@@ -29,6 +29,11 @@ angular.module('starter.services', [])
   };
   Geolocation();
   return info;
+})
+//------------------------------------------------------------------------------
+.service("myFirebase", function($firebaseObject) {
+  var ref = new Firebase("https://ucansee.firebaseio.com");
+  this.data = $firebaseObject(ref);
 })
 //------------------------------------------------------------------------------
 .service("uCanSee", function($firebaseObject) {

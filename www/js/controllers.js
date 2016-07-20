@@ -1,7 +1,7 @@
 //------------------------------------------------------------------------------
 angular.module('starter.controllers', [])
 //------------------------------------------------------------------------------
-.controller('IntroCtrl', function($scope, $state, $translate, uCanSee, myChallenge, myLocation) {
+.controller('IntroCtrl', function($scope, $state, $translate, uCanSee, myChallenge, myLocation, myFirebase) {
   $scope.login = function() {
     $state.go('login');
   };
@@ -13,7 +13,9 @@ angular.module('starter.controllers', [])
   };
 })
 //------------------------------------------------------------------------------
-.controller('LoginCtrl', function($scope, $state, $timeout, $ionicLoading, $ionicPopup, uCanSee) {
+.controller('LoginCtrl', function($scope, $state, $timeout, $ionicLoading, $ionicPopup, uCanSee, myFirebase) {
+  $scope.Firebase = myFirebase.data;
+
   $scope.uCanSee = uCanSee.Fire;
   $scope.userData = new Object();
   $scope.signIn = function(param) {

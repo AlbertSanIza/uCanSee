@@ -1,7 +1,7 @@
 //------------------------------------------------------------------------------
 angular.module('starter.controllers', [])
 //------------------------------------------------------------------------------
-.controller('IntroCtrl', function($scope, $state, $translate, uCanSee, myChallenge, myLocation, myFirebase) {
+.controller('IntroCtrl', function($scope, $state, $translate, uCanSee, myChallenge, myFirebase, myLocation) {
   $scope.login = function() {
     $state.go('login');
   };

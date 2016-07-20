@@ -41,7 +41,7 @@ angular.module('starter.translate', ['pascalprecht.translate'])
       '_REGISTER_INFO_1': 'Si deseas participar envia un correo con la siguiente información:',
       '_REGISTER_INFO_2': 'Nombre del Equipo',
       '_REGISTER_INFO_3': 'Lista de los integrantes con sus matriculas',
-      '_REGISTER_INFO_4': 'El correo debera ser enviado a albert.sanchez@cetys.mx',
+      '_REGISTER_INFO_4': 'El correo deberá ser enviado a albert.sanchez@cetys.mx',
       '_RULES': 'Reglas',
       '_RULES_INFO_1': 'El equipo debe ser de 6 integrantes. Todos deben ser estudiantes de CETYS universidad y deben seguir las instrucciones de los organizadores. Cualquier tipo de agresión fisica o verbal resultará en la descalificación de todo el equipo ',
       '_SPONSORS': 'Patrocinadores',

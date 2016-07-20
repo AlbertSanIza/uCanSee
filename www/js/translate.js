@@ -36,6 +36,23 @@ angular.module('starter.translate', ['pascalprecht.translate'])
       '_ENTER_PASSWORD': 'Ingresa la contraseña de tu equipo',
       '_SIGN_IN_NOW': 'INICIAR SESION YA',
       '_PBS': 'Proveida por uCanSee Staff',
+      '_REGISTER_INFO_1': '',
+      '_REGISTER_INFO_2': '',
+      '_REGISTER_INFO_3': '',
+      '_REGISTER_INFO_4': '',
+      '_RULES': '',
+      '_RULES_INFO_1': '',
+      '_SPONSORS': '',
+      '_SPONSORS_INFO_1': '',
+      '_HELP': 'Help',
+      '_HELP_INFO_1': '',
+      '_CREDITS': '',
+      '_CREDITS_INFO_1': '',
+      '_DASHBOARD': '',
+      '_TEAM': '',
+      '_TEAM_MEMBERS': '',
+      '_CHALLENGE': '',
+      '_LOCATION': '',
     });
     $translateProvider.preferredLanguage('en');
 })

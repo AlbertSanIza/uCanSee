@@ -16,7 +16,7 @@ angular.module('starter.services', [])
         lat = lat.toFixed(6);
         lon = lon.toFixed(6);
         info.coordinates = [lat, lon];
-        console.log("lat: " + lat + "lon: " + lon);
+        //console.log("lat: " + lat + "lon: " + lon);
         $timeout(function() {
           Geolocation();
         }, 1000);

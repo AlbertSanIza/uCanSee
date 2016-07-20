@@ -34,13 +34,7 @@ angular.module('starter.services', ['firebase'])
 .service("myFirebase", function($firebaseObject) {
   var ref = new Firebase("https://ucansee.firebaseio.com");
   this.data = $firebaseObject(ref);
-  this.index = 0;
-})
-//------------------------------------------------------------------------------
-.service("uCanSee", function($firebaseObject) {
-  var ref = new Firebase("https://ucansee.firebaseio.com");
-  this.Fire = $firebaseObject(ref);
-  this.Index = ""
+  this.index = "";
 })
 //------------------------------------------------------------------------------
 .service("myProximiio", function($http) {

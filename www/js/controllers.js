@@ -41,12 +41,12 @@ angular.module('starter.controllers', [])
   $scope.Firebase = myFirebase.data;
 })
 //------------------------------------------------------------------------------
-.controller('ChallengeCtrl', function($scope, myFirebase, myChallenge, myLocation) {
+.controller('ChallengeCtrl', function($scope, myFirebase, myLocation, myChallenge) {
   $scope.Firebase = myFirebase.data;
   $scope.Challenges = myChallenge.tasks;
 })
 //------------------------------------------------------------------------------
-.controller('LocationCtrl', function($scope, myChallenge, myLocation) {
+.controller('LocationCtrl', function($scope, myLocation, myChallenge) {
   $scope.myPosition = myLocation;
   $scope.Challenges = myChallenge.tasks;
 

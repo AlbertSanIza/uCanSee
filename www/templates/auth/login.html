@@ -6,14 +6,14 @@
     <form>
       <div class="list card">
         <div class="item item-divider">{{'_SELECT_TEAM' | translate}}:</div>
-        <ion-radio ng-repeat="Team in uCanSee.teams" ng-value="$index" ng-model="userData.index">{{Team.name}}</ion-radio>
+        <ion-radio ng-repeat="Team in Firebase.teams" ng-value="$index" ng-model="user.index">{{Team.name}}</ion-radio>
         <div class="item item-divider">{{'_ENTER_PASSWORD' | translate}}:</div>
         <label class="item item-input">
-          <input type="tel" style="text-align:center;" placeholder="{{'_PBS' | translate}}" ng-model="userData.password">
+          <input type="tel" style="text-align:center;" placeholder="{{'_PBS' | translate}}" ng-model="user.password">
         </label>
       </div>
       <div class="padding">
-        <button class="button button-block button-energized" ng-disabled="userData.index == null || !userData.password" ng-click="signIn(userData)">
+        <button class="button button-block button-energized" ng-disabled="user.index == null || !user.password" ng-click="signIn2(user)">
           <span style="color:black">
             <b>{{'_SIGN_IN_NOW' | translate}}!</b>
           </span>

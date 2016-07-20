@@ -13,28 +13,26 @@ angular.module('starter.controllers', [])
   };
 })
 //------------------------------------------------------------------------------
-.controller('LoginCtrl', function($scope, $state, $timeout, $ionicLoading, $ionicPopup, uCanSee, myFirebase) {
+.controller('LoginCtrl', function($scope, $state, $timeout, $ionicLoading, $ionicPopup, myFirebase) {
   $scope.Firebase = myFirebase.data;
-
-  $scope.uCanSee = uCanSee.Fire;
-  $scope.userData = new Object();
-  $scope.signIn = function(param) {
-    if(param.password == $scope.uCanSee.teams[param.index].password) {
-      uCanSee.Index = param.index;
-      $ionicLoading.show();
-      $timeout(function () {
+  $scope.user = new Object();
+  $scope.signIn2 = function(input) {
+    $ionicLoading.show();
+    $timeout(function () {
+      if(input.password == $scope.Firebase.teams[input.index].password) {
         $state.go('tab.dashboard');
         $ionicLoading.hide();
-      }, 2000);
-    } else {
-      var alertPopup = $ionicPopup.alert({
-        title: "Error!",
-        templateUrl: 'templates/ionic/popup.html'
-      });
-      alertPopup.then(function(res) {
-        $scope.userData.password = "";
-      });
-    }
+      } else {
+        $ionicLoading.hide();
+        var alertPopup = $ionicPopup.alert({
+          title: "Error!",
+          templateUrl: 'templates/ionic/popup.html'
+        });
+        alertPopup.then(function(res) {
+          $scope.userData.password = "";
+        });
+      }
+    }, 1600);
   };
 })
 //------------------------------------------------------------------------------

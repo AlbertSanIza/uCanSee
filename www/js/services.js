@@ -1,6 +1,36 @@
 //------------------------------------------------------------------------------
 angular.module('starter.services', [])
 //------------------------------------------------------------------------------
+.factory("myLocation", function($timeout, $ionicPlatform, $cordovaGeolocation) {
+  var info = {};
+  info.coordinates = [32.506511, -116.923950];
+  var posOptions = {
+    timeout: 3000,
+    enableHighAccuracy: false
+  };
+  function Geolocation() {
+    $ionicPlatform.ready(function() {
+      $cordovaGeolocation.getCurrentPosition(posOptions).then(function (position) {
+        var lat = parseFloat(position.coords.latitude);
+        var lon = parseFloat(position.coords.longitude);
+        lat = lat.toFixed(7);
+        lon = lon.toFixed(7);
+        info.coordinates = [lat, lon];
+        console.log("lat: " + lat + "lon: " + lon);
+        $timeout(function() {
+          Geolocation();
+        }, 500);
+      }, function(err) {
+        $timeout(function() {
+          Geolocation();
+        }, 5000);
+      });
+    });
+  };
+  Geolocation();
+  return info;
+})
+//------------------------------------------------------------------------------
 .service("uCanSee", function($firebaseObject) {
   var ref = new Firebase("https://ucansee.firebaseio.com");
   this.Fire = $firebaseObject(ref);

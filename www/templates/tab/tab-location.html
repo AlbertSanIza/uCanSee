@@ -3,14 +3,11 @@
     <span style="color:black">{{'_LOCATION' | translate}}</span>
   </ion-nav-title>
   <div class="bar bar-subheader bar-dark">
-    <h2 class="title">Lat: {{myPosition[0]}}, Lon: {{myPosition[1]}} {{locatorOn}}</h2>
+    <h2 class="title">Lat: {{myPosition.coordinates[0]}}, Lon: {{myPosition.coordinates[1]}}</h2>
   </div>
-  <ion-nav-buttons side="secondary">
-    <button class="button button-icon ion-navigate " style="color: black;" ng-click="findMe()"></button>
-  </ion-nav-buttons>
   <ion-content class="padding" padding="false" scroll="false" has-subheader="true">
-    <ng-map class="locationMap" center="{{myPosition}}" zoom="17" disable-default-u-i="true" zoom-control="true" scrollwheel="false" draggable="false">
-      <marker position="{{myPosition}}" title="My Position"></marker>
+    <ng-map class="locationMap" center="{{myPosition.coordinates}}" zoom="17" disable-default-u-i="true" zoom-control="true" scrollwheel="false" draggable="false">
+      <marker position="{{myPosition.coordinates}}" title="My Position"></marker>
       <marker ng-repeat="marc in Challenges" position="{{marc.position}}" icon="img/beachflag.png"></marker>
     </ng-map>
   </ion-content>

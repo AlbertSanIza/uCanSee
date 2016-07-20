@@ -6,7 +6,7 @@
     <h2 class="title">Lat: {{myPosition[0]}}, Lon: {{myPosition[1]}}</h2>
   </div>
   <ion-nav-buttons side="secondary">
-    <button class="button button-icon ion-navigate" ng-click="findMe()"></button>
+    <button class="button button-icon ion-navigate" style="color: black;" ng-click="findMe()"></button>
   </ion-nav-buttons>
   <ion-content class="padding" padding="false" scroll="false" has-subheader="true">
     <ng-map class="locationMap" center="{{myPosition}}" zoom="17" disable-default-u-i="true" zoom-control="true" scrollwheel="false" draggable="false">

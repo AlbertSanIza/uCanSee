@@ -1,12 +1,15 @@
 //------------------------------------------------------------------------------
 angular.module('starter.controllers', [])
 //------------------------------------------------------------------------------
-.controller('IntroCtrl', function($scope, $state, uCanSee) {
+.controller('IntroCtrl', function($scope, $state, $translate, uCanSee) {
   $scope.login = function() {
     $state.go('login');
   };
   $scope.register = function() {
     $state.go('register');
+  };
+  $scope.changeLanguage = function(key) {
+    $translate.use(key);
   };
 })
 //------------------------------------------------------------------------------

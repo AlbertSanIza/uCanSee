@@ -40,16 +40,7 @@ angular.module('starter.services', ['firebase'])
     'Content-Type': 'application/json',
     'Authorization': 'Bearer ' + token
   };
-  //----------------------------------------------------------------------------
-  // Geofences
-  // This endpoint retrieves all geofences. GeoSearch can be enabled by adding all optional search_* query parameters.
   this.Geofences_All = function(param) {
-    // limit
-    // skip
-    //// search_latitude
-    //// search_longitude
-    //// search_radius
-    //// search_distance_order
     return $http.get(urlBase + 'core/geofences?limit=' + param.limit + '&skip=' + param.skip, {headers});
   };
 })

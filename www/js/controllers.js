@@ -50,5 +50,7 @@ angular.module('starter.controllers', [])
 //------------------------------------------------------------------------------
 .controller('LocationCtrl', function($scope, myChallenge, myLocation) {
   $scope.myPosition = myLocation;
+  $scope.Challenges = myChallenge.tasks;
+
 })
 //------------------------------------------------------------------------------

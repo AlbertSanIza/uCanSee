@@ -43,12 +43,12 @@ angular.module('starter.controllers', [])
   $scope.uCanSee = uCanSee.Fire;
 })
 //------------------------------------------------------------------------------
-.controller('ChallengeCtrl', function($scope, $ionicPlatform, uCanSee, myChallenge, myLocation) {
+.controller('ChallengeCtrl', function($scope, uCanSee, myChallenge, myLocation) {
   $scope.uCanSee = uCanSee.Fire;
   $scope.Challenges = myChallenge.tasks;
 })
 //------------------------------------------------------------------------------
-.controller('LocationCtrl', function($scope, $timeout, $ionicLoading, $ionicPlatform, $cordovaGeolocation, myChallenge, myLocation) {
+.controller('LocationCtrl', function($scope, myChallenge, myLocation) {
   $scope.myPosition = myLocation;
 })
 //------------------------------------------------------------------------------

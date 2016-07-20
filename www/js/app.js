@@ -1,15 +1,5 @@
 //------------------------------------------------------------------------------
-angular.module('starter', [
-  'ionic',
-  'starter.router',
-  'starter.controllers',
-  'starter.directives',
-  'starter.services',
-  'starter.translate',
-  'ngCordova',
-  'ngMap',
-  'firebase'
-])
+angular.module('starter', ['ionic', 'starter.router', 'starter.controllers', 'starter.directives', 'starter.services', 'starter.translate', 'ngCordova', 'ngMap', 'firebase'])
 //------------------------------------------------------------------------------
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {

@@ -115,7 +115,7 @@ angular.module('starter.controllers', [])
   });
 })
 //------------------------------------------------------------------------------
-.controller('LocationCtrl', function($scope, $timeout, $ionicLoading, $ionicPlatform, $cordovaGeolocation, myProximiio) {
+.controller('LocationCtrl', function($scope, $timeout, $ionicLoading, $ionicPlatform, $cordovaGeolocation) {
   $scope.text = "Loading..."
   $scope.myPosition = [32.506511, -116.923950];
   var posOptions = {

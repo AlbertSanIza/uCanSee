@@ -4,13 +4,9 @@ angular.module('starter.services', ['firebase'])
 .factory("myLocation", function($timeout, $ionicPlatform, $cordovaGeolocation) {
   var info = {};
   info.coordinates = [32.506511, -116.923950];
-  var posOptions = {
-    timeout: 5000,
-    enableHighAccuracy: true
-  };
   function Geolocation() {
     $ionicPlatform.ready(function() {
-      $cordovaGeolocation.getCurrentPosition(posOptions).then(function (position) {
+      $cordovaGeolocation.getCurrentPosition({timeout: 5000, enableHighAccuracy: true}).then(function (position) {
         var lat = parseFloat(position.coords.latitude);
         var lon = parseFloat(position.coords.longitude);
         lat = lat.toFixed(6);

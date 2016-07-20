@@ -115,7 +115,7 @@ angular.module('starter.controllers', [])
   });
 })
 //------------------------------------------------------------------------------
-.controller('LocationCtrl', function($scope, $ionicLoading, $ionicPlatform, $cordovaGeolocation, myProximiio) {
+.controller('LocationCtrl', function($scope, $timeout, $ionicLoading, $ionicPlatform, $cordovaGeolocation, myProximiio) {
   $scope.text = "Loading..."
   $scope.myPosition = [32.506511, -116.923950];
   var posOptions = {
@@ -137,6 +137,9 @@ angular.module('starter.controllers', [])
         $ionicLoading.hide();
       }, function(err) {
         $scope.text = err.message;
+        $timeout(function() {
+          $ionicLoading.hide();
+        }, 3000);
       });
     });
   };

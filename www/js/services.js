@@ -36,10 +36,7 @@ angular.module('starter.services', ['firebase'])
 .service("myProximiio", function($http) {
   var urlBase = 'https://api.proximi.fi/'
   var token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImlzcyI6ImMwYWJkNWJlMjNmODQwN2NjMGRkMjgxMzZkYzI3YWVlIiwidHlwZSI6InVzZXIiLCJ1c2VyIjoiU2FuY2hleiBBbGJlcnQiLCJ1c2VyX2lkIjoiNDRhMGYzZTctN2E4Zi00ODk2LWIxZjAtMTliN2ZkOTcwODBjIiwidGVuYW50X2lkIjoiZDYzNmUwZTAtNWQyMC00N2FlLTg0ZGQtZTA5MTRiODY2Y2UxIn0.gLxHRTpG9jQdwwdhrcty2hoNJA-cR1Ot-inIxFyPhl0';
-  var headers = {
-    'Content-Type': 'application/json',
-    'Authorization': 'Bearer ' + token
-  };
+  var headers = {'Content-Type': 'application/json','Authorization': 'Bearer ' + token};
   this.Geofences_All = function(param) {
     return $http.get(urlBase + 'core/geofences?limit=' + param.limit + '&skip=' + param.skip, {headers});
   };

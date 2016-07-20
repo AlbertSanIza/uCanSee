@@ -36,6 +36,6 @@ angular.module('starter.translate', ['pascalprecht.translate'])
       '_SIGN_IN_NOW': 'INICIAR SESION YA',
       '_PBS': 'Proveida por uCanSee Staff',
     });
-    $translateProvider.preferredLanguage('es');
+    $translateProvider.preferredLanguage('en');
 })
 //------------------------------------------------------------------------------

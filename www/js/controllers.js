@@ -49,6 +49,7 @@ angular.module('starter.controllers', [])
 })
 //------------------------------------------------------------------------------
 .controller('LocationCtrl', function($scope, $timeout, $ionicLoading, $ionicPlatform, $cordovaGeolocation, myChallenge) {
+  $scope.locatorOn = false;
   $scope.Challenges = myChallenge.tasks;
   $scope.text = "Loading..."
   $scope.myPosition = [32.506511, -116.923950];
@@ -57,6 +58,7 @@ angular.module('starter.controllers', [])
     enableHighAccuracy: false
   };
   $scope.findMe = function() {
+    $scope.locatorOn = true;
     $ionicLoading.show({
       template: '<ion-spinner icon="spiral" class="spinner-energized"></ion-spinner><br>{{text}}...',
       scope: $scope
@@ -70,6 +72,7 @@ angular.module('starter.controllers', [])
         $scope.myPosition = [lat, lon];
         $ionicLoading.hide();
       }, function(err) {
+        $scope.locatorOn = false;
         $scope.text = err.message;
         $timeout(function() {
           $ionicLoading.hide();

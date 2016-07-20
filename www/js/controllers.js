@@ -24,10 +24,7 @@ angular.module('starter.controllers', [])
         $ionicLoading.hide();
       } else {
         $ionicLoading.hide();
-        var alertPopup = $ionicPopup.alert({
-          title: "Error!",
-          templateUrl: 'templates/ionic/popup.html'
-        });
+        var alertPopup = $ionicPopup.alert({title: "Error!", templateUrl: 'templates/ionic/popup.html'});
         alertPopup.then(function(res) {
           $scope.userData.password = "";
         });

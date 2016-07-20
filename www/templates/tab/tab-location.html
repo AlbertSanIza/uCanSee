@@ -11,6 +11,7 @@
   <ion-content class="padding" padding="false" scroll="false" has-subheader="true">
     <ng-map class="locationMap" center="{{myPosition}}" zoom="17" disable-default-u-i="true" zoom-control="true" scrollwheel="false" draggable="false">
       <marker position="{{myPosition}}" title="My Position"></marker>
+      <marker ng-repeat="marc in Challenges" position="{{marc.position}}" icon="img/beachflag.png"></marker>
     </ng-map>
   </ion-content>
 </ion-view>

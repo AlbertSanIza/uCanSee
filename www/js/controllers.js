@@ -48,7 +48,8 @@ angular.module('starter.controllers', [])
   $scope.Challenges = myChallenge.tasks;
 })
 //------------------------------------------------------------------------------
-.controller('LocationCtrl', function($scope, $timeout, $ionicLoading, $ionicPlatform, $cordovaGeolocation) {
+.controller('LocationCtrl', function($scope, $timeout, $ionicLoading, $ionicPlatform, $cordovaGeolocation, myChallenge) {
+  $scope.Challenges = myChallenge.tasks;
   $scope.text = "Loading..."
   $scope.myPosition = [32.506511, -116.923950];
   var posOptions = {

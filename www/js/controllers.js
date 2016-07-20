@@ -26,7 +26,7 @@ angular.module('starter.controllers', [])
       }, 2000);
     } else {
       var alertPopup = $ionicPopup.alert({
-        title: 'Wrong Password',
+        title: "Error!",
         templateUrl: 'templates/ionic/popup.html'
       });
       alertPopup.then(function(res) {

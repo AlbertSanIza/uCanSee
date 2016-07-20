@@ -1,11 +1,11 @@
 <ion-view>
   <ion-nav-title>
-    <span style="color:black">Dashboard</span>
+    <span style="color:black">{{'_DASHBOARD' | translate}}</span>
   </ion-nav-title>
   <ion-content padding="true">
     <div class="card">
       <div class="item item-divider">
-        Team:
+        {{'_TEAM' | translate}}:
       </div>
       <div class="item item-text-wrap">
         <h1>{{uCanSee.teams[0].name}}</h1>
@@ -13,7 +13,7 @@
     </div>
     <div class="list">
       <div class="item item-divider">
-        Team Members:
+        {{'_TEAM_MEMBERS' | translate}}:
       </div>
       <div class="item" ng-repeat="member in uCanSee.teams[0].members">
         {{member.id}} - {{member.name}}

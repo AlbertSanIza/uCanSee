@@ -22,6 +22,9 @@ angular.module('starter.translate', ['pascalprecht.translate'])
       '_HELP_INFO_1': 'For any questions please contact albert.sanchez@cetys.mx',
       '_CREDITS': 'Provided by uCanSee Staff',
       '_CREDITS_INFO_1': 'This app was made by students of CETYS University using amazing technologies like Ionic, Proximi.io, Firebase and Cordova',
+      '_DASHBOARD': 'Dashboard',
+      '_TEAM': 'Team',
+      '_TEAM_MEMBERS': 'Team Members',
     });
     $translateProvider.translations('es', {
       '_REGISTER': 'REGISTRO',

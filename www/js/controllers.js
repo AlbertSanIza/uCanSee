@@ -40,8 +40,8 @@ angular.module('starter.controllers', [])
   $scope.Firebase = myFirebase.data;
 })
 //------------------------------------------------------------------------------
-.controller('ChallengeCtrl', function($scope, uCanSee, myChallenge, myLocation) {
-  $scope.uCanSee = uCanSee.Fire;
+.controller('ChallengeCtrl', function($scope, myFirebase, myChallenge, myLocation) {
+  $scope.Firebase = myFirebase.data;
   $scope.Challenges = myChallenge.tasks;
 })
 //------------------------------------------------------------------------------

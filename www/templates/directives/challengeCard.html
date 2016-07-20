@@ -7,7 +7,7 @@
   <div class="item item-text-wrap" ng-hide="info.locked" align="justify">
     <h1>{{info.name}}</h1>
     <img class="full-image" ng-src="img/challenges/{{info.img}}" style="height: 120px;">
-    <ng-map center="{{info.position}}" zoom="19" disable-default-u-i="true">
+    <ng-map center="{{info.position}}" zoom="19" disable-default-u-i="true" scrollwheel="false" draggable="false">
       <marker position="{{info.position}}" title="My Position"></marker>
     </ng-map>
     <button class="button button-block button-positive">

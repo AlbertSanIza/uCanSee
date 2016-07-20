@@ -5,21 +5,21 @@ angular.module('starter.services', [])
   var info = {};
   info.coordinates = [32.506511, -116.923950];
   var posOptions = {
-    timeout: 3000,
-    enableHighAccuracy: false
+    timeout: 5000,
+    enableHighAccuracy: true
   };
   function Geolocation() {
     $ionicPlatform.ready(function() {
       $cordovaGeolocation.getCurrentPosition(posOptions).then(function (position) {
         var lat = parseFloat(position.coords.latitude);
         var lon = parseFloat(position.coords.longitude);
-        lat = lat.toFixed(7);
-        lon = lon.toFixed(7);
+        lat = lat.toFixed(6);
+        lon = lon.toFixed(6);
         info.coordinates = [lat, lon];
         console.log("lat: " + lat + "lon: " + lon);
         $timeout(function() {
           Geolocation();
-        }, 500);
+        }, 1000);
       }, function(err) {
         $timeout(function() {
           Geolocation();

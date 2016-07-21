@@ -72,6 +72,6 @@ angular.module('starter.translate', ['pascalprecht.translate'])
       '_CHALLENGE': 'Desafío',
       '_LOCATION': 'Localización',
     });
-    $translateProvider.preferredLanguage('es');
+    $translateProvider.preferredLanguage('en');
 })
 //------------------------------------------------------------------------------

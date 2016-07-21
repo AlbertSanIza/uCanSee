@@ -6,7 +6,7 @@
     <h2 class="title">Lat: {{myPosition.coordinates[0]}}, Lon: {{myPosition.coordinates[1]}}</h2>
   </div>
   <ion-content class="padding" padding="false" scroll="false" has-subheader="true">
-    <ng-map class="locationMap" center="{{myPosition.coordinates}}" zoom="17" disable-default-u-i="true" zoom-control="true" scrollwheel="false" draggable="false">
+    <ng-map class="locationMap" center="{{myPosition.coordinates}}" zoom="17" disable-default-u-i="true" zoom-control="true">
       <marker position="{{myPosition.coordinates}}" title="My Position"></marker>
       <marker ng-repeat="marc in Challenges" position="{{marc.position}}" icon="img/beachflag.png"></marker>
     </ng-map>

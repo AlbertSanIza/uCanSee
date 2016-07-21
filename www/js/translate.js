@@ -42,7 +42,7 @@ angular.module('starter.translate', ['pascalprecht.translate'])
       '_TASK_DESCRIPTION_5': 'Team will form a line, team members must pass an orange using their necks. If the orange falls the team must begin at the start of the line.',
       '_TASK_TITLE_6': 'Clothes Line',
       '_TASK_DESCRIPTION_6': 'Team must use all of their usable clothes (if they want) to make a line of clothes in order to reach the other side of the field.',
-      '_SWIPE_TG_STARTED': '',
+      '_SWIPE_TG_STARTED': 'Swipe to get started!',
     });
     $translateProvider.translations('es', {
       '_REGISTER': 'REGISTRO',
@@ -71,6 +71,6 @@ angular.module('starter.translate', ['pascalprecht.translate'])
       '_CHALLENGE': 'Desafio',
       '_LOCATION': 'Localización',
     });
-    $translateProvider.preferredLanguage('en');
+    $translateProvider.preferredLanguage('es');
 })
 //------------------------------------------------------------------------------

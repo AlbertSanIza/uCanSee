@@ -47,57 +47,57 @@ angular.module('starter.services', ['firebase'])
     {
       "id": 0,
       "proximiio": "e6583632-8b70-4ce7-a20d-0fa8a70ac65e",
-      "name": "Sack Relay Run",
-      "description": "Team must complete, a Sack Relay Run, one lap per team member.",
+      "name": "_TASK_TITLE_0",
+      "description": "_TASK_DESCRIPTION_0",
       "locked": false,
       "img": "0.jpg"
     },
     {
       "id": 1,
       "proximiio": "e27f2c6f-5394-4b70-89c1-a28dbb35a8b0",
-      "name": "Flour Basket",
-      "description": "Team will sit in a straight line, in the form of a caterpillar. Teams must pass backwards a drilled basket full of flour above their heads and if the basket is dropped activity starts again.",
+      "name": "_TASK_TITLE_1",
+      "description": "_TASK_DESCRIPTION_1",
       "locked": false,
       "img": "1.jpg"
     },
     {
       "id": 2,
       "proximiio": "20013b4b-214b-4174-8c34-74fab31d09b7",
-      "name": "Water Balloon Harvest",
-      "description": "Organizers will throw water balloons, teams will need to catch them with a basket. At least 10 successful balloon catch are necessary to complete the stage.",
-      "locked": true,
+      "name": "_TASK_TITLE_2",
+      "description": "_TASK_DESCRIPTION_2",
+      "locked": false,
       "img": "2.jpg"
     },
     {
       "id": 3,
       "proximiio": "18a7de39-a32e-4ce5-8196-0809dcbb3654",
-      "name": "Obstacle Run",
-      "description": "Teams will be divided in pairs and each pair will tie themselves by the feet. All pairs must complete the obstacle run.",
-      "locked": true,
+      "name": "_TASK_TITLE_3",
+      "description": "_TASK_DESCRIPTION_03",
+      "locked": false,
       "img": "3.jpg"
     },
     {
       "id": 4,
       "proximiio": "7950954e-49fc-4319-b7ab-1ad94ffde5d7",
-      "name": "Balloon Popping",
-      "description": "Each team member must complete a lap and blow up a balloon with another team member by pressing their chest.",
-      "locked": true,
+      "name": "_TASK_TITLE_4",
+      "description": "_TASK_DESCRIPTION_04",
+      "locked": false,
       "img": "4.jpg"
     },
     {
       "id": 5,
       "proximiio": "b2f4841b-99f4-4643-aa1b-3b5ab4fea769",
-      "name": "Orange Kiss",
-      "description": "Team will form a line, team members must pass an orange using their necks. If the orange falls the team must begin at the start of the line.",
-      "locked": true,
+      "name": "_TASK_TITLE_5",
+      "description": "_TASK_DESCRIPTION_05",
+      "locked": false,
       "img": "5.jpg"
     },
     {
       "id": 6,
       "proximiio": "7a62dafb-43df-4c6f-98e2-2589a3ae1de6",
-      "name": "Clothes Line",
-      "description": "Team must use all of their usable clothes (if they want) to make a line of clothes in order to reach the other side of the field.",
-      "locked": true,
+      "name": "_TASK_TITLE_6",
+      "description": "_TASK_DESCRIPTION_06",
+      "locked": false,
       "img": "6.jpg"
     }
   ];

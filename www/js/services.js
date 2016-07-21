@@ -72,7 +72,7 @@ angular.module('starter.services', ['firebase'])
       "id": 3,
       "proximiio": "18a7de39-a32e-4ce5-8196-0809dcbb3654",
       "name": "_TASK_TITLE_3",
-      "description": "_TASK_DESCRIPTION_03",
+      "description": "_TASK_DESCRIPTION_3",
       "locked": false,
       "img": "3.jpg"
     },
@@ -80,7 +80,7 @@ angular.module('starter.services', ['firebase'])
       "id": 4,
       "proximiio": "7950954e-49fc-4319-b7ab-1ad94ffde5d7",
       "name": "_TASK_TITLE_4",
-      "description": "_TASK_DESCRIPTION_04",
+      "description": "_TASK_DESCRIPTION_4",
       "locked": false,
       "img": "4.jpg"
     },
@@ -88,7 +88,7 @@ angular.module('starter.services', ['firebase'])
       "id": 5,
       "proximiio": "b2f4841b-99f4-4643-aa1b-3b5ab4fea769",
       "name": "_TASK_TITLE_5",
-      "description": "_TASK_DESCRIPTION_05",
+      "description": "_TASK_DESCRIPTION_5",
       "locked": false,
       "img": "5.jpg"
     },
@@ -96,7 +96,7 @@ angular.module('starter.services', ['firebase'])
       "id": 6,
       "proximiio": "7a62dafb-43df-4c6f-98e2-2589a3ae1de6",
       "name": "_TASK_TITLE_6",
-      "description": "_TASK_DESCRIPTION_06",
+      "description": "_TASK_DESCRIPTION_6",
       "locked": false,
       "img": "6.jpg"
     }

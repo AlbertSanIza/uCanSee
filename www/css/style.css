@@ -53,10 +53,6 @@ ng-map {
 .cardUnLocked {
   height: 100%;
 }
-.cardButton {
-  position: static;
-  bottom: 10px;
-}
 .centerFace {
   position: relative;
   top: 50%;

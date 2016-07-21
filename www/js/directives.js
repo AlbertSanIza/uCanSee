@@ -1,7 +1,7 @@
 //------------------------------------------------------------------------------
 angular.module('starter.directives', [])
 //------------------------------------------------------------------------------
-.directive('challengeCard', ['$ionicModal', function($ionicModal) {
+.directive('challengeCard', ['$ionicModal', '$ionicPlatform', '$cordovaBarcodeScanner', function($ionicModal, $ionicPlatform, $cordovaBarcodeScanner) {
   return {
     'restrict': 'E',
     'templateUrl': 'templates/directives/challengeCard.html',
@@ -20,6 +20,13 @@ angular.module('starter.directives', [])
     };
     $scope.closeModal = function() {
       $scope.modal.hide();
+    };
+    $scope.scanCode = function() {
+      $ionicPlatform.ready(function() {
+        $cordovaBarcodeScanner.scan().then(function(barcodeData) {
+        }, function(error) {
+        });
+      });
     };
   };
 }])

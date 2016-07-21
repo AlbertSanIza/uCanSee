@@ -11,6 +11,13 @@
       <marker position="{{info.position}}" icon="img/beachflag.png"></marker>
       <shape name="circle" stroke-color="#000000" stroke-opacity="0.5" stroke-weight="2" fill-color="#cccc00" fill-opacity="0.3" center="{{info.position}}" radius="{{info.radius}}"></shape>
     </ng-map>
-    <button class="button button-block button-positive" ng-click="openModal()">{{'_INFORMATION' | translate}}</button>
+    <div class="row">
+      <div class="col">
+        <button class="button button-block button-positive" ng-click="openModal()">{{'_INFORMATION' | translate}}</button>
+      </div>
+      <div class="col">
+        <button class="button button-block button-balanced" ng-click="scanCode()">{{'_SCAN_CODE' | translate}}</button>
+      </div>
+    </div>
   </div>
 </div>

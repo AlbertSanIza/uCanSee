@@ -48,7 +48,7 @@ ng-map {
 }
 .cardMap {
   position: relative;
-  height: calc(100% - 120px) !important;
+  height: calc(100% - 130px) !important;
 }
 .cardUnLocked {
   height: 100%;

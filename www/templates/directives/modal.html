@@ -1,0 +1,14 @@
+<ion-modal-view>
+  <ion-header-bar class="bar-positive">
+    <h1 class="title">{{'_CHALLENGE' | translate}} {{info.id + 1}}</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeModal()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content class="padding">
+    <h1>{{info.name | translate}}</h1>
+    <img class="full-image" ng-src="img/challenges/{{info.img}}" style="max-height: 300px;">
+    {{info.description | translate}}
+    <button class="button button-block button-positive">Scan Code</button>
+  </ion-content>
+</ion-modal-view>

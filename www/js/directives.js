@@ -7,6 +7,7 @@ angular.module('starter.directives', [])
     'templateUrl': 'templates/directives/challengeCard.html',
     'scope': {
       'info': '=',
+      'location': '=',
     },
     'link': link
   };

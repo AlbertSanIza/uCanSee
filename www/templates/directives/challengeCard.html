@@ -6,9 +6,9 @@
   </div>
   <div class="item item-text-wrap cardUnLocked" ng-hide="info.locked" align="justify">
     <h1>{{'_CHALLENGE' | translate}} {{info.id + 1}}</h1>
-    <ng-map class="cardMap" center="{{info.position}}" zoom="18" disable-default-u-i="true" scrollwheel="false" draggable="false">
+    <ng-map class="cardMap" center="{{info.coordinates}}" zoom="18" disable-default-u-i="true" scrollwheel="false" draggable="false">
+      <marker position="{{location.coordinates}}"></marker>
       <marker position="{{info.position}}" icon="img/beachflag.png"></marker>
-      <marker position="{{info.position}}"></marker>
       <shape name="circle" stroke-color="#000000" stroke-opacity="0.5" stroke-weight="2" fill-color="#cccc00" fill-opacity="0.3" center="{{info.position}}" radius="{{info.radius}}"></shape>
     </ng-map>
     <button class="button button-block button-positive" ng-click="openModal()">{{'_INFORMATION' | translate}}</button>

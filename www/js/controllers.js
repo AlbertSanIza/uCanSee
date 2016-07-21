@@ -43,6 +43,7 @@ angular.module('starter.controllers', [])
 //------------------------------------------------------------------------------
 .controller('ChallengeCtrl', function($scope, myFirebase, myLocation, myChallenge) {
   $scope.Firebase = myFirebase.data;
+  $scope.myPosition = myLocation;
   $scope.Challenges = myChallenge.tasks;
 })
 //------------------------------------------------------------------------------

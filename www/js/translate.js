@@ -43,6 +43,7 @@ angular.module('starter.translate', ['pascalprecht.translate'])
       '_TASK_TITLE_6': 'Clothes Line',
       '_TASK_DESCRIPTION_6': 'Team must use all of their usable clothes (if they want) to make a line of clothes in order to reach the other side of the field.',
       '_SWIPE_TG_STARTED': 'Swipe to get started!',
+      '_INFORMATION': 'Information',
     });
     $translateProvider.translations('es', {
       '_REGISTER': 'REGISTRO',
@@ -68,7 +69,7 @@ angular.module('starter.translate', ['pascalprecht.translate'])
       '_DASHBOARD': 'Tablero',
       '_TEAM': 'Equipo',
       '_TEAM_MEMBERS': 'Miembros del equipo',
-      '_CHALLENGE': 'Desafio',
+      '_CHALLENGE': 'Desafío',
       '_LOCATION': 'Localización',
     });
     $translateProvider.preferredLanguage('es');

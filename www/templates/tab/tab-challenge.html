@@ -1,6 +1,6 @@
 <ion-view>
   <ion-nav-title>
-    <span style="color:black">Challenge</span>
+    <span style="color:black">{{'_CHALLENGE' | translate}}</span>
   </ion-nav-title>
   <ion-content scroll="false">
     <ion-slide-box>
@@ -12,8 +12,8 @@
           </div>
         </div>
       </ion-slide>
-      <ion-slide ng-repeat="task in Challenges">
-        <challenge-card info="task"></challenge-card>
+      <ion-slide ng-repeat="Task in Challenges">
+        <challenge-card info="Task"></challenge-card>
       </ion-slide>
     </ion-slide-box>
   </ion-content>

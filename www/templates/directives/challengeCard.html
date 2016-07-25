@@ -15,8 +15,11 @@
       <div class="col">
         <button class="button button-block button-positive" ng-click="openModal()">{{'_INFORMATION' | translate}}</button>
       </div>
-      <div class="col">
-        <button class="button button-block button-balanced" ng-disabled="info.done" ng-click="scanCode()">{{'_SCAN_QR' | translate}}</button>
+      <div class="col" ng-switch="info.done">
+        <button class="button button-block button-balanced" ng-switch-when="false" ng-click="scanCode()">{{'_SCAN_QR' | translate}}</button>
+        <button class="button button-block button-balanced" ng-switch-when="true" ng-disabled="info.done">
+          <span style="color: black;">{{'_COMPLETED' | translate}}</span>
+        </button>
       </div>
     </div>
   </div>

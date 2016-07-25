@@ -67,7 +67,7 @@ angular.module('starter.services', ['firebase'])
       "proximiio": "e27f2c6f-5394-4b70-89c1-a28dbb35a8b0",
       "name": "_TASK_TITLE_1",
       "description": "_TASK_DESCRIPTION_1",
-      "locked": true,
+      "locked": false,
       "img": "1.jpg"
     },
     {
@@ -75,7 +75,7 @@ angular.module('starter.services', ['firebase'])
       "proximiio": "20013b4b-214b-4174-8c34-74fab31d09b7",
       "name": "_TASK_TITLE_2",
       "description": "_TASK_DESCRIPTION_2",
-      "locked": true,
+      "locked": false,
       "img": "2.jpg"
     },
     {

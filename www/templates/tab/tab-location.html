@@ -8,7 +8,7 @@
   <ion-content class="padding" padding="false" scroll="false" has-subheader="true">
     <ng-map class="locationMap" center="{{myPosition.coordinates}}" zoom="17" disable-default-u-i="true" zoom-control="true">
       <marker position="{{myPosition.coordinates}}" title="My Position"></marker>
-      <marker ng-repeat="Challenge in Challenges" position="{{Challenge.position}}" icon="img/beachflag.png"></marker>
+      <marker ng-repeat="Challenge in Challenges" ng-if="Challenge.locked == false" position="{{Challenge.position}}" icon="img/beachflag.png"></marker>
     </ng-map>
   </ion-content>
 </ion-view>

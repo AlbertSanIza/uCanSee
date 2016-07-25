@@ -51,8 +51,9 @@ angular.module('starter.services', ['firebase'])
   };
 })
 //------------------------------------------------------------------------------
-.service("myChallenge", function($http, myProximiio) {
-  var task = [
+.factory("myChallenge", function($http, myProximiio) {
+  var info = new Object();
+  info.tasks = [
     {
       "id": 0,
       "proximiio": "e6583632-8b70-4ce7-a20d-0fa8a70ac65e",
@@ -66,7 +67,7 @@ angular.module('starter.services', ['firebase'])
       "proximiio": "e27f2c6f-5394-4b70-89c1-a28dbb35a8b0",
       "name": "_TASK_TITLE_1",
       "description": "_TASK_DESCRIPTION_1",
-      "locked": false,
+      "locked": true,
       "img": "1.jpg"
     },
     {
@@ -74,7 +75,7 @@ angular.module('starter.services', ['firebase'])
       "proximiio": "20013b4b-214b-4174-8c34-74fab31d09b7",
       "name": "_TASK_TITLE_2",
       "description": "_TASK_DESCRIPTION_2",
-      "locked": false,
+      "locked": true,
       "img": "2.jpg"
     },
     {
@@ -82,7 +83,7 @@ angular.module('starter.services', ['firebase'])
       "proximiio": "18a7de39-a32e-4ce5-8196-0809dcbb3654",
       "name": "_TASK_TITLE_3",
       "description": "_TASK_DESCRIPTION_3",
-      "locked": false,
+      "locked": true,
       "img": "3.jpg"
     },
     {
@@ -90,7 +91,7 @@ angular.module('starter.services', ['firebase'])
       "proximiio": "7950954e-49fc-4319-b7ab-1ad94ffde5d7",
       "name": "_TASK_TITLE_4",
       "description": "_TASK_DESCRIPTION_4",
-      "locked": false,
+      "locked": true,
       "img": "4.jpg"
     },
     {
@@ -98,7 +99,7 @@ angular.module('starter.services', ['firebase'])
       "proximiio": "b2f4841b-99f4-4643-aa1b-3b5ab4fea769",
       "name": "_TASK_TITLE_5",
       "description": "_TASK_DESCRIPTION_5",
-      "locked": false,
+      "locked": true,
       "img": "5.jpg"
     },
     {
@@ -106,21 +107,21 @@ angular.module('starter.services', ['firebase'])
       "proximiio": "7a62dafb-43df-4c6f-98e2-2589a3ae1de6",
       "name": "_TASK_TITLE_6",
       "description": "_TASK_DESCRIPTION_6",
-      "locked": false,
+      "locked": true,
       "img": "6.jpg"
     }
   ];
-  this.tasks = task;
   myProximiio.Geofences_All({limit: '10', skip: '0'}).success(function(data) {
     for (var i = 0; i < data.length; i++) {
-      for (var j = 0; j < task.length; j++) {
-        if(data[i].id == task[j].proximiio) {
-          task[j].position = [data[i].area.lat, data[i].area.lng];
-          task[j].radius = data[i].radius;
+      for (var j = 0; j < info.tasks.length; j++) {
+        if(data[i].id == info.tasks[j].proximiio) {
+          info.tasks[j].position = [data[i].area.lat, data[i].area.lng];
+          info.tasks[j].radius = data[i].radius;
           break;
         }
       }
     };
   });
+  return info;
 })
 //------------------------------------------------------------------------------

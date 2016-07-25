@@ -1,7 +1,7 @@
 //------------------------------------------------------------------------------
 angular.module('starter.services', ['firebase'])
 //------------------------------------------------------------------------------
-.factory("myLocation", function($timeout, $ionicPlatform, $cordovaGeolocation) {
+.factory("myLocation", function($timeout, $ionicPlatform, $cordovaGeolocation, myFirebase) {
   var info = {};
   info.coordinates = [32.506511, -116.923950];
   function Geolocation() {
@@ -11,8 +11,13 @@ angular.module('starter.services', ['firebase'])
         var lon = parseFloat(position.coords.longitude);
         lat = lat.toFixed(6);
         lon = lon.toFixed(6);
-        info.coordinates = [lat, lon];
-        //console.log("lat: " + lat + "lon: " + lon);
+        if(myFirebase.data.mock) {
+          if(myFirebase.data.mock.activated == true) {
+            info.coordinates = [myFirebase.data.mock.lat, myFirebase.data.mock.lon];
+          } else {
+            info.coordinates = [lat, lon];
+          }
+        }
         $timeout(function() {
           Geolocation();
         }, 1000);

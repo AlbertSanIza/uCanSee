@@ -9,6 +9,7 @@
     <ng-map class="locationMap" center="{{myPosition.coordinates}}" zoom="17" disable-default-u-i="true" zoom-control="true">
       <marker position="{{myPosition.coordinates}}" title="My Position"></marker>
       <marker ng-repeat="Challenge in Challenges" ng-if="Challenge.locked == false" position="{{Challenge.position}}" icon="img/beachflag.png"></marker>
+      <shape ng-repeat="Challenge in Challenges" ng-if="Challenge.locked == false" name="circle" stroke-color="#000000" stroke-opacity="0.5" stroke-weight="2" fill-color="#cccc00" fill-opacity="0.3" center="{{Challenge.position}}" radius="{{Challenge.radius}}"></shape>
     </ng-map>
   </ion-content>
 </ion-view>

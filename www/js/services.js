@@ -60,7 +60,8 @@ angular.module('starter.services', ['firebase'])
       "name": "_TASK_TITLE_0",
       "description": "_TASK_DESCRIPTION_0",
       "locked": false,
-      "img": "0.jpg"
+      "img": "0.jpg",
+      "done": true
     },
     {
       "id": 1,
@@ -68,7 +69,8 @@ angular.module('starter.services', ['firebase'])
       "name": "_TASK_TITLE_1",
       "description": "_TASK_DESCRIPTION_1",
       "locked": false,
-      "img": "1.jpg"
+      "img": "1.jpg",
+      "done": true
     },
     {
       "id": 2,
@@ -76,7 +78,8 @@ angular.module('starter.services', ['firebase'])
       "name": "_TASK_TITLE_2",
       "description": "_TASK_DESCRIPTION_2",
       "locked": false,
-      "img": "2.jpg"
+      "img": "2.jpg",
+      "done": false
     },
     {
       "id": 3,
@@ -84,7 +87,8 @@ angular.module('starter.services', ['firebase'])
       "name": "_TASK_TITLE_3",
       "description": "_TASK_DESCRIPTION_3",
       "locked": true,
-      "img": "3.jpg"
+      "img": "3.jpg",
+      "done": false
     },
     {
       "id": 4,
@@ -92,7 +96,8 @@ angular.module('starter.services', ['firebase'])
       "name": "_TASK_TITLE_4",
       "description": "_TASK_DESCRIPTION_4",
       "locked": true,
-      "img": "4.jpg"
+      "img": "4.jpg",
+      "done": false
     },
     {
       "id": 5,
@@ -100,7 +105,8 @@ angular.module('starter.services', ['firebase'])
       "name": "_TASK_TITLE_5",
       "description": "_TASK_DESCRIPTION_5",
       "locked": true,
-      "img": "5.jpg"
+      "img": "5.jpg",
+      "done": false
     },
     {
       "id": 6,
@@ -108,7 +114,8 @@ angular.module('starter.services', ['firebase'])
       "name": "_TASK_TITLE_6",
       "description": "_TASK_DESCRIPTION_6",
       "locked": true,
-      "img": "6.jpg"
+      "img": "6.jpg",
+      "done": false
     }
   ];
   myProximiio.Geofences_All({limit: '10', skip: '0'}).success(function(data) {

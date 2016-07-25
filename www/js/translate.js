@@ -45,6 +45,7 @@ angular.module('starter.translate', ['pascalprecht.translate'])
       '_SWIPE_TG_STARTED': 'Swipe to get started!',
       '_INFORMATION': 'Information',
       '_SCAN_QR': 'Scan QR',
+      '_COMPLETED': 'Completed',
     });
     $translateProvider.translations('es', {
       '_REGISTER': 'REGISTRO',

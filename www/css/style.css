@@ -17,7 +17,7 @@ ng-map {
 .cardLocked {
   position: relative;
   top: -1px;
-  background-color: #bfbfbf;
+  background-color: #e6e6e6;
   height: calc(100% + 2px);
 }
 .cardLockedContent {
@@ -35,9 +35,9 @@ ng-map {
   -webkit-box-align: center;
   -moz-box-align: center;
   box-align: center;
-  color: #ffff00;
+  color: #666666;
   text-align: center;
-  text-shadow: 2px 2px #000000;
+  text-shadow: 2px 2px #b3b300;
   font-size: 200px;
 }
 .gmnoprint, .gm-style-cc {

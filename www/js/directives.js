@@ -24,6 +24,9 @@ angular.module('starter.directives', [])
     $scope.scanCode = function() {
       $ionicPlatform.ready(function() {
         $cordovaBarcodeScanner.scan().then(function(barcodeData) {
+          if(barcodeData.text == "UCANSEE") {
+            $scope.info.done = true;
+          }
         }, function(error) {
         });
       });

@@ -4,29 +4,34 @@ angular.module('starter.services', ['firebase'])
 .factory("myLocation", function($timeout, $ionicPlatform, $cordovaGeolocation, myFirebase) {
   var info = {};
   info.coordinates = [32.506511, -116.923950];
+  function timeoutLocal(time) {
+    $timeout(function() {
+      Geolocation();
+    }, time);
+  };
+
   function Geolocation() {
-    $ionicPlatform.ready(function() {
-      $cordovaGeolocation.getCurrentPosition({timeout: 5000, enableHighAccuracy: true}).then(function (position) {
-        var lat = parseFloat(position.coords.latitude);
-        var lon = parseFloat(position.coords.longitude);
-        lat = lat.toFixed(6);
-        lon = lon.toFixed(6);
-        if(myFirebase.data.mock) {
-          if(myFirebase.data.mock.activated == true) {
-            info.coordinates = [myFirebase.data.mock.lat, myFirebase.data.mock.lon];
-          } else {
+    if(myFirebase.data.mock) {
+      if(myFirebase.data.mock.activated == true) {
+        info.coordinates = [myFirebase.data.mock.lat, myFirebase.data.mock.lon];
+        timeoutLocal(1000);
+      } else {
+        $ionicPlatform.ready(function() {
+          $cordovaGeolocation.getCurrentPosition({timeout: 5000, enableHighAccuracy: true}).then(function (position) {
+            var lat = parseFloat(position.coords.latitude);
+            var lon = parseFloat(position.coords.longitude);
+            lat = lat.toFixed(6);
+            lon = lon.toFixed(6);
             info.coordinates = [lat, lon];
-          }
-        }
-        $timeout(function() {
-          Geolocation();
-        }, 1000);
-      }, function(err) {
-        $timeout(function() {
-          Geolocation();
-        }, 5000);
-      });
-    });
+            timeoutLocal(1000);
+          }, function(err) {
+            timeoutLocal(5000);
+          });
+        });
+      }
+    } else {
+      timeoutLocal(1000);
+    }
   };
   Geolocation();
   return info;

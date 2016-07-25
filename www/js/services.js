@@ -9,7 +9,6 @@ angular.module('starter.services', ['firebase'])
       Geolocation();
     }, time);
   };
-
   function Geolocation() {
     if(myFirebase.data.mock) {
       if(myFirebase.data.mock.activated == true) {

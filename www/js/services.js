@@ -59,63 +59,70 @@ angular.module('starter.services', ['firebase'])
       "proximiio": "e6583632-8b70-4ce7-a20d-0fa8a70ac65e",
       "name": "_TASK_TITLE_0",
       "description": "_TASK_DESCRIPTION_0",
-      "locked": false,
       "img": "0.jpg",
-      "done": true
+      "locked": false,
+      "done": true,
+      "active": false
     },
     {
       "id": 1,
       "proximiio": "e27f2c6f-5394-4b70-89c1-a28dbb35a8b0",
       "name": "_TASK_TITLE_1",
       "description": "_TASK_DESCRIPTION_1",
-      "locked": false,
       "img": "1.jpg",
-      "done": true
+      "locked": false,
+      "done": true,
+      "active": false
     },
     {
       "id": 2,
       "proximiio": "20013b4b-214b-4174-8c34-74fab31d09b7",
       "name": "_TASK_TITLE_2",
       "description": "_TASK_DESCRIPTION_2",
-      "locked": false,
       "img": "2.jpg",
-      "done": false
+      "locked": false,
+      "done": false,
+      "active": true
     },
     {
       "id": 3,
       "proximiio": "18a7de39-a32e-4ce5-8196-0809dcbb3654",
       "name": "_TASK_TITLE_3",
       "description": "_TASK_DESCRIPTION_3",
-      "locked": true,
       "img": "3.jpg",
-      "done": false
+      "locked": true,
+      "done": false,
+      "active": false
     },
     {
       "id": 4,
       "proximiio": "7950954e-49fc-4319-b7ab-1ad94ffde5d7",
       "name": "_TASK_TITLE_4",
       "description": "_TASK_DESCRIPTION_4",
-      "locked": true,
       "img": "4.jpg",
-      "done": false
+      "locked": true,
+      "done": false,
+      "active": false
     },
     {
       "id": 5,
       "proximiio": "b2f4841b-99f4-4643-aa1b-3b5ab4fea769",
       "name": "_TASK_TITLE_5",
       "description": "_TASK_DESCRIPTION_5",
-      "locked": true,
       "img": "5.jpg",
-      "done": false
+      "locked": true,
+      "done": false,
+      "active": false
     },
     {
       "id": 6,
       "proximiio": "7a62dafb-43df-4c6f-98e2-2589a3ae1de6",
       "name": "_TASK_TITLE_6",
       "description": "_TASK_DESCRIPTION_6",
-      "locked": true,
       "img": "6.jpg",
-      "done": false
+      "locked": true,
+      "done": false,
+      "active": false
     }
   ];
   info.currentSlide = 2;

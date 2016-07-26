@@ -47,6 +47,7 @@ angular.module('starter.translate', ['pascalprecht.translate'])
       '_SCAN_QR': 'Scan QR',
       '_COMPLETED': 'Completed',
       '_GO_TO_START': 'Run to start point to finish!',
+      '_FIND_ME': 'Find me!',
     });
     $translateProvider.translations('es', {
       '_REGISTER': 'REGISTRO',

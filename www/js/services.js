@@ -118,6 +118,7 @@ angular.module('starter.services', ['firebase'])
       "done": false
     }
   ];
+  info.currentSlide = 2;
   myProximiio.Geofences_All({limit: '10', skip: '0'}).success(function(data) {
     for (var i = 0; i < data.length; i++) {
       for (var j = 0; j < info.tasks.length; j++) {

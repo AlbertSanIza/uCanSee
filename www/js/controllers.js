@@ -41,7 +41,10 @@ angular.module('starter.controllers', [])
   $scope.Firebase = myFirebase.data;
 })
 //------------------------------------------------------------------------------
-.controller('ChallengeCtrl', function($scope, myFirebase, myLocation, myChallenge) {
+.controller('ChallengeCtrl', function($scope, $ionicSlideBoxDelegate, myFirebase, myLocation, myChallenge) {
+  $scope.$on('$ionicView.enter', function(e) {
+    $ionicSlideBoxDelegate.slide(myChallenge.currentSlide + 1, 300);
+  });
   $scope.Firebase = myFirebase.data;
   $scope.myPosition = myLocation;
   $scope.Challenges = myChallenge.tasks;

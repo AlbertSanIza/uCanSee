@@ -36,6 +36,9 @@ angular.module('starter.directives', [])
       $scope.info.done = true;
       $scope.$parent.updateCurrentSlide();
     };
+    $scope.goToLocationTab = function() {
+      $scope.$parent.goToLocationTab();
+    };
   };
 }])
 //------------------------------------------------------------------------------

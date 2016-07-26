@@ -41,7 +41,7 @@ angular.module('starter.controllers', [])
   $scope.Firebase = myFirebase.data;
 })
 //------------------------------------------------------------------------------
-.controller('ChallengeCtrl', function($scope, $ionicSlideBoxDelegate, myFirebase, myLocation, myChallenge) {
+.controller('ChallengeCtrl', function($scope, $state, $ionicSlideBoxDelegate, myFirebase, myLocation, myChallenge) {
   $scope.$on('$ionicView.enter', function(e) {
     $ionicSlideBoxDelegate.slide(myChallenge.currentSlide + 1, 300);
   });
@@ -51,6 +51,9 @@ angular.module('starter.controllers', [])
   $scope.updateCurrentSlide = function() {
     myChallenge.currentSlide = myChallenge.currentSlide + 1;
     $ionicSlideBoxDelegate.slide(myChallenge.currentSlide + 1, 300);
+  };
+  $scope.goToLocationTab = function() {
+    $state.go('tab.location');
   };
 })
 //------------------------------------------------------------------------------

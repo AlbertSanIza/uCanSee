@@ -52,3 +52,17 @@ ng-map {
   width: 80px;
   height: 80px;
 }
+.locator {
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+}
+.locatorContent {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  opacity: 1;
+}

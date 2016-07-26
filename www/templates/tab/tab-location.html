@@ -6,6 +6,11 @@
     <h2 class="title">Lat: {{myPosition.coordinates[0]}}, Lon: {{myPosition.coordinates[1]}}</h2>
   </div>
   <ion-content class="padding" padding="false" scroll="false" has-subheader="true">
+    <div class="locator">
+      <div class="locatorContent">
+        <ion-spinner icon="ripple" class="spinner-positive"></ion-spinner>
+      </div>
+    </div>
     <ng-map class="locationMap" center="{{myPosition.coordinates}}" zoom="17" disable-default-u-i="true" zoom-control="true">
       <marker position="{{myPosition.coordinates}}" title="My Position"></marker>
       <marker ng-repeat="Challenge in Challenges" ng-if="Challenge.locked == false" position="{{Challenge.position}}" icon="img/beachflag.png"></marker>

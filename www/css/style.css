@@ -22,6 +22,7 @@ ng-map {
 }
 .cardLockedContent {
   position: relative;
+  padding: 0px 20px 0px 20px;
   top: 50%;
   transform: translateY(-50%);
   color: #666666;

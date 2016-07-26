@@ -34,6 +34,7 @@ angular.module('starter.directives', [])
     };
     $scope.scanCodeSim = function() {
       $scope.info.done = true;
+      $scope.info.active = false;
       $scope.$parent.updateCurrentSlide();
     };
     $scope.goToLocationTab = function() {

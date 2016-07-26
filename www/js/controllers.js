@@ -51,7 +51,6 @@ angular.module('starter.controllers', [])
   $scope.updateCurrentSlide = function() {
     myChallenge.currentSlide = myChallenge.currentSlide + 1;
     $ionicSlideBoxDelegate.slide(myChallenge.currentSlide + 1, 300);
-    myChallenge.tasks[myChallenge.currentSlide - 1].active = false;
     myChallenge.tasks[myChallenge.currentSlide].active = true;
   };
   $scope.goToLocationTab = function() {

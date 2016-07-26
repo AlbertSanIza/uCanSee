@@ -26,6 +26,7 @@ angular.module('starter.directives', [])
         $cordovaBarcodeScanner.scan().then(function(barcodeData) {
           if(barcodeData.text == "UCANSEE") {
             $scope.info.done = true;
+            $scope.$parent.updateCurrentSlide();
           }
         }, function(error) {
         });

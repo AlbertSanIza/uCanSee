@@ -48,6 +48,10 @@ angular.module('starter.controllers', [])
   $scope.Firebase = myFirebase.data;
   $scope.myPosition = myLocation;
   $scope.Challenges = myChallenge.tasks;
+  $scope.updateCurrentSlide = function() {
+    myChallenge.currentSlide = myChallenge.currentSlide + 1;
+    $ionicSlideBoxDelegate.slide(myChallenge.currentSlide + 1, 300);
+  };
 })
 //------------------------------------------------------------------------------
 .controller('LocationCtrl', function($scope, myLocation, myChallenge) {

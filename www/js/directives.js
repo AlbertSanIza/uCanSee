@@ -32,6 +32,10 @@ angular.module('starter.directives', [])
         });
       });
     };
+    $scope.scanCodeSim = function() {
+      $scope.info.done = true;
+      $scope.$parent.updateCurrentSlide();
+    };
   };
 }])
 //------------------------------------------------------------------------------

@@ -6,13 +6,19 @@
     <h2 class="title">Lat: {{myPosition.coordinates[0]}}, Lon: {{myPosition.coordinates[1]}}</h2>
   </div>
   <ion-content class="padding" padding="false" scroll="false" has-subheader="true">
-    <div class="locator">
-      <div class="locatorContent">
+    <div class="locator" ng-show="serching" ng-switch="found">
+      <div class="locatorContent" ng-switch-when="false">
         <ion-spinner icon="ripple" class="spinner-positive searchSpinner"></ion-spinner>
         <br>
         <b>{{'_DTNC' | translate}}:</b>
         <br>
         <b>- {{distanceToNextChallenge}} {{'_UNITS' | translate}} -</b>
+        <br>
+      </div>
+      <div class="locatorContent" ng-switch-when="true">
+        <i class="ion-beer" style="font-size: 74px;"></i>
+        <br>
+        {{'_CHALLENGE_FOUND' | translate}}
         <br>
       </div>
     </div>

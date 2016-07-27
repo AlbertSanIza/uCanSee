@@ -65,19 +65,26 @@ angular.module('starter.controllers', [])
   $scope.myPosition = myLocation;
   $scope.Challenges = myChallenge.tasks;
   $scope.distanceToNextChallenge = 0;
+  $scope.serching = true;
+  $scope.found = false;
   $scope.$watch('myPosition.coordinates', function() {
     if(myChallenge.currentSlide != 7) {
       if(myChallenge.tasks[myChallenge.currentSlide].active == true) {
         if(myChallenge.tasks[myChallenge.currentSlide].locked == true) {
           if(myChallenge.tasks[myChallenge.currentSlide].position) {
+            $scope.serching = true;
+            $scope.found = false;
             var distance = Math.sqrt(Math.pow(($scope.myPosition.coordinates[0] - myChallenge.tasks[myChallenge.currentSlide].position[0]), 2) + Math.pow(($scope.myPosition.coordinates[1] - myChallenge.tasks[myChallenge.currentSlide].position[1]), 2));
             distance = distance * 30000;
             distance = distance.toFixed(3);
             if(distance <= 6) {
               myChallenge.tasks[myChallenge.currentSlide].locked = false;
+              $scope.found = true;
               $timeout(function() {
                 $state.go('tab.challenge');
-              }, 2000);
+                $scope.serching = false;
+                $scope.found = false;
+              }, 3000);
             } else {
               $scope.distanceToNextChallenge = distance;
             }

@@ -60,9 +60,9 @@ angular.module('starter.services', ['firebase'])
       "name": "_TASK_TITLE_0",
       "description": "_TASK_DESCRIPTION_0",
       "img": "0.jpg",
-      "locked": false,
-      "done": true,
-      "active": false
+      "locked": true,
+      "done": false,
+      "active": true
     },
     {
       "id": 1,
@@ -70,8 +70,8 @@ angular.module('starter.services', ['firebase'])
       "name": "_TASK_TITLE_1",
       "description": "_TASK_DESCRIPTION_1",
       "img": "1.jpg",
-      "locked": false,
-      "done": true,
+      "locked": true,
+      "done": false,
       "active": false
     },
     {
@@ -80,9 +80,9 @@ angular.module('starter.services', ['firebase'])
       "name": "_TASK_TITLE_2",
       "description": "_TASK_DESCRIPTION_2",
       "img": "2.jpg",
-      "locked": false,
+      "locked": true,
       "done": false,
-      "active": true
+      "active": false
     },
     {
       "id": 3,
@@ -125,7 +125,7 @@ angular.module('starter.services', ['firebase'])
       "active": false
     }
   ];
-  info.currentSlide = 2;
+  info.currentSlide = 0;
   myProximiio.Geofences_All({limit: '10', skip: '0'}).success(function(data) {
     for (var i = 0; i < data.length; i++) {
       for (var j = 0; j < info.tasks.length; j++) {

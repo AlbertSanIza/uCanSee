@@ -51,6 +51,7 @@ angular.module('starter.controllers', [])
   $scope.currentSlide = myChallenge.currentSlide;
   $scope.updateCurrentSlide = function() {
     myChallenge.currentSlide = myChallenge.currentSlide + 1;
+    $scope.currentSlide = myChallenge.currentSlide;
     $ionicSlideBoxDelegate.slide(myChallenge.currentSlide + 1, 300);
     if(myChallenge.currentSlide != 7) {
       myChallenge.tasks[myChallenge.currentSlide].active = true;

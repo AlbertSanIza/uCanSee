@@ -8,7 +8,12 @@
   <ion-content class="padding" padding="false" scroll="false" has-subheader="true">
     <div class="locator">
       <div class="locatorContent">
-        <ion-spinner icon="ripple" class="spinner-positive"></ion-spinner>
+        <ion-spinner icon="ripple" class="spinner-positive searchSpinner"></ion-spinner>
+        <br>
+        <b>{{'_DTNC' | translate}}:</b>
+        <br>
+        <b>- 100 {{'_UNITS' | translate}} -</b>
+        <br>
       </div>
     </div>
     <ng-map class="locationMap" center="{{myPosition.coordinates}}" zoom="17" disable-default-u-i="true" zoom-control="true">

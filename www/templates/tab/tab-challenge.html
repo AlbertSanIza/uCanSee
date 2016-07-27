@@ -15,9 +15,13 @@
       <ion-slide ng-repeat="Task in Challenges">
         <challenge-card info="Task" location="myPosition"></challenge-card>
       </ion-slide>
-      <ion-slide ng-if="myChallenge.currentSlide == 7">
-        <div class="card cardCustom">
-          <div class="centerFace" style="text-align: center;">
+      <ion-slide>
+        <div class="card cardCustom" ng-switch="currentSlide">
+          <div class="centerFace" style="text-align: center;" ng-switch-default>
+            <i class="ion-alert-circled" style="font-size: 200px;"></i>
+            <h2>{{'_PLEASE_COMPLETE' | translate}}</h2>
+          </div>
+          <div class="centerFace" style="text-align: center;" ng-switch-when="7">
             <i class="ion-ribbon-a" style="font-size: 200px;"></i>
             <h2>{{'_GO_TO_START' | translate}}</h2>
           </div>

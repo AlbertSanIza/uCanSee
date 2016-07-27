@@ -6,7 +6,7 @@
     </div>
   </div>
   <div class="item item-text-wrap cardUnLocked" align="justify">
-    <h1>{{'_CHALLENGE' | translate}} {{info.id + 1}} <!--a href="" ng-click="scanCodeSim()">Sim</a--></h1>
+    <h1 ng-click="scanCodeSim()">{{'_CHALLENGE' | translate}} {{info.id + 1}}</h1>
     <ng-map class="cardMap" center="{{info.position}}" zoom="18" disable-default-u-i="true" scrollwheel="false" draggable="false">
       <marker position="{{location.coordinates}}"></marker>
       <marker position="{{info.position}}" icon="img/beachflag.png"></marker>

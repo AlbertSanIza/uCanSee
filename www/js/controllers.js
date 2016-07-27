@@ -58,8 +58,28 @@ angular.module('starter.controllers', [])
   };
 })
 //------------------------------------------------------------------------------
-.controller('LocationCtrl', function($scope, myLocation, myChallenge) {
+.controller('LocationCtrl', function($scope, $state, $timeout, myLocation, myChallenge) {
   $scope.myPosition = myLocation;
   $scope.Challenges = myChallenge.tasks;
+  $scope.distanceToNextChallenge = 0;
+  $scope.$watch('myPosition.coordinates', function() {
+    if(myChallenge.tasks[myChallenge.currentSlide].active == true) {
+      if(myChallenge.tasks[myChallenge.currentSlide].locked == true) {
+        if(myChallenge.tasks[myChallenge.currentSlide].position) {
+          var distance = Math.sqrt(Math.pow(($scope.myPosition.coordinates[0] - myChallenge.tasks[myChallenge.currentSlide].position[0]), 2) + Math.pow(($scope.myPosition.coordinates[1] - myChallenge.tasks[myChallenge.currentSlide].position[1]), 2));
+          distance = distance * 30000;
+          distance = distance.toFixed(2);
+          if(distance <= 6) {
+            myChallenge.tasks[myChallenge.currentSlide].locked = false;
+            $timeout(function() {
+              $state.go('tab.challenge');
+            }, 2000);
+          } else {
+            $scope.distanceToNextChallenge = distance;
+          }
+        }
+      }
+    }
+  }, true);
 })
 //------------------------------------------------------------------------------

@@ -43,7 +43,7 @@ angular.module('starter.controllers', [])
 //------------------------------------------------------------------------------
 .controller('ChallengeCtrl', function($scope, $state, $ionicSlideBoxDelegate, myFirebase, myLocation, myChallenge) {
   $scope.$on('$ionicView.enter', function(e) {
-    $ionicSlideBoxDelegate.slide(myChallenge.currentSlide + 1, 300);
+    $ionicSlideBoxDelegate.slide(myChallenge.currentSlide + 1, 500);
   });
   $scope.Firebase = myFirebase.data;
   $scope.myPosition = myLocation;
@@ -81,7 +81,6 @@ angular.module('starter.controllers', [])
             if(distance <= 6) {
               myChallenge.tasks[myChallenge.currentSlide].locked = false;
               myChallenge.lines.push(myChallenge.tasks[myChallenge.currentSlide].position);
-              console.log($scope.line.length);
               $scope.found = true;
               $timeout(function() {
                 $state.go('tab.challenge');

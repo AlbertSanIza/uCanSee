@@ -48,6 +48,8 @@ angular.module('starter.translate', ['pascalprecht.translate'])
       '_COMPLETED': 'Completed',
       '_GO_TO_START': 'Run to start point to finish!',
       '_FIND_ME': 'Find me!',
+      '_DTNC': 'Distance to next Challenge',
+      '_UNITS': 'Units',
     });
     $translateProvider.translations('es', {
       '_REGISTER': 'REGISTRO',

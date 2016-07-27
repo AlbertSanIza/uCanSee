@@ -50,6 +50,7 @@ angular.module('starter.translate', ['pascalprecht.translate'])
       '_FIND_ME': 'Find me!',
       '_DTNC': 'Distance to next Challenge',
       '_UNITS': 'Units',
+      '_PLEASE_COMPLETE': 'Please complete all Challenges!',
     });
     $translateProvider.translations('es', {
       '_REGISTER': 'REGISTRO',
@@ -99,6 +100,7 @@ angular.module('starter.translate', ['pascalprecht.translate'])
       '_FIND_ME': '¡Encuentrame!',
       '_DTNC': 'Distancia al próximo desafío',
       '_UNITS': 'Unidades',
+      '_PLEASE_COMPLETE': 'Porfavor completa todos los retos!',
     });
     $translateProvider.preferredLanguage('en');
 })

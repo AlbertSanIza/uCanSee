@@ -64,6 +64,7 @@ angular.module('starter.controllers', [])
 .controller('LocationCtrl', function($scope, $state, $timeout, myLocation, myChallenge) {
   $scope.myPosition = myLocation;
   $scope.Challenges = myChallenge.tasks;
+  $scope.line = myChallenge.lines;
   $scope.distanceToNextChallenge = 0;
   $scope.serching = true;
   $scope.found = false;
@@ -79,6 +80,8 @@ angular.module('starter.controllers', [])
             distance = distance.toFixed(3);
             if(distance <= 6) {
               myChallenge.tasks[myChallenge.currentSlide].locked = false;
+              myChallenge.lines.push(myChallenge.tasks[myChallenge.currentSlide].position);
+              console.log($scope.line.length);
               $scope.found = true;
               $timeout(function() {
                 $state.go('tab.challenge');
